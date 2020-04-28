@@ -11,15 +11,16 @@ body {
   background-color: white;
   padding: 12px;
   text-align: center;
+  margin: auto;
 }
 
 /* Style the top navigation bar */
 .topnav {
   float : center;
   background-color: white;
+  width: 80%; 
+  /*font-size : 5vw ;*/
   margin: auto;
-  width: 80%;
-  font-size : 30px
   
 }
 
@@ -88,12 +89,12 @@ body {
 
 /* Left and right column */
 .column.side {
-  width: 20%;
+  width: 25%;
 }
 
 /* Middle column */
 .column.middle {
-  width: 60%;
+  width: 50%;
 }
 
 .column.middle table {
@@ -106,14 +107,14 @@ body {
   padding: 12px;
   text-align: center;
   border-bottom: 1px solid #ddd;
-  font-size : 25px ;
+  /*font-size : 2em ;*/
 }
 
 .column.middle td {
   padding: 8px;
   text-align: center;
   border-bottom: 1px solid #ddd;
-  font-size : 20px ;
+  /*font-size : 20px ;*/
 }
 
 .column.middle tr:hover {
@@ -123,19 +124,19 @@ body {
 
 .column.middle c{
   color: orange;
-  font-size : 15px ;
+  /*font-size : 15px ;*/
 }
 .column.middle a{
   color: blue;
-  font-size : 0px ;
+  /*font-size : 0px ;*/
 }
 .column.middle r{
   color: green;
-  font-size : 15px ;
+  /*font-size : 15px ;*/
 }
 .column.middle d{
   color: red;
-  font-size : 15px ;
+  /* font-size : 15px ; */
 }
 
 /* Clear floats after the columns */
