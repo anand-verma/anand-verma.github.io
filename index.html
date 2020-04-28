@@ -1,55 +1,317 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-<script src="jquery-3.5.0.js"></script>
-  </head>
-  <script>
- var data;
-	$.ajax({
-	  type: "GET",  
-	  url: "test.csv",
-	  dataType: "text",       
-	  success: function(response)  
-	  {
-		data = $.csv.toArrays(response);
-		generateHtmlTable(data);
-	  }   
-	}); 
-	function generateHtmlTable(data) {
-    var html = '<table  class="table table-condensed table-hover table-striped">';
- 
-      if(typeof(data[0]) === 'undefined') {
-        return null;
-      } else {
-		$.each(data, function( index, row ) {
-		  //bind header
-		  if(index == 0) {
-			html += '<thead>';
-			html += '<tr>';
-			$.each(row, function( index, colData ) {
-				html += '<th>';
-				html += colData;
-				html += '</th>';
-			});
-			html += '</tr>';
-			html += '</thead>';
-			html += '<tbody>';
-		  } else {
-			html += '<tr>';
-			$.each(row, function( index, colData ) {
-				html += '<td>';
-				html += colData;
-				html += '</td>';
-			});
-			html += '</tr>';
-		  }
-		});
-		html += '</tbody>';
-		html += '</table>';
-		alert(html);
-		$('#csv-display').append(html);
-	  }
-	}	
-	</script>
+<html lang="en">
+<head>
+<title>Corona in Bihar</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Covid-19 Dashboard for Bihar</h1>
+  <p>Click on the district name for blockwise detail </p>
+</div>
+<div class = "topnav">
+	<c >Confirmed<br>366</c>
+	<a >Active<br>300</a>
+	<r >Recovered<br>64</r>
+	<d >Deceased<br>2</d>
+	<br>
+</div>
+
+<div class="row">
+  <div class="column side">
+    
+  </div>
+  
+  <div class="column middle">
+    <h3><br></h3>
+    <table>
+  <tr>
+    <th>District</th>
+    <th><c>[+20]</c>Confirmed</th>
+    <th><a>[+12]</a>Active</th>
+    <th><r>[+8]</r>Recovered</th>
+    <th><d>[+0]</d>Deceased</th>
+  </tr>
+  <tr onclick="window.location='districts/araria.html';">
+    <td>Araria</td>
+    <td><c>[+1]</c>1</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/arwal.html';">
+    <td>Arwal</td>
+    <td><c>[+0]</c>4</td>
+    <td><a>[+0]</a>4</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/aurangabad.html';">
+    <td>Aurangabad</td>
+    <td><c>[+7]</c>7</td>
+    <td><a>[+0]</a>7</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/banka.html';">
+    <td>Banka</td>
+    <td><c>[+1]</c>3</td>
+    <td><a>[+0]</a>3</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/begusarai.html';">
+    <td>Begusarai</td>
+    <td><c>[+0]</c>9</td>
+    <td><a>[+0]</a>4</td>
+	<td><r>[+4]</r>5</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/bhagalpur.html';">
+    <td>Bhagalpur</td>
+    <td><c>[+0]</c>5</td>
+    <td><a>[+0]</a>4</td>
+	<td><r>[+0]</r>1</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/bhojpur.html';">
+    <td>Bhojpur</td>
+    <td><c>[+0]</c>9</td>
+    <td><a>[+0]</a>8</td>
+	<td><r>[+0]</r>1</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/buxar.html';">
+    <td>Buxar</td>
+    <td><c>[+1]</c>26</td>
+    <td><a>[+0]</a>25</td>
+	<td><r>[+0]</r>1</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/darbhanga.html';">
+    <td>Darbhanga</td>
+    <td><c>[+0]</c>1</td>
+    <td><a>[+0]</a>1</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/east-champaran.html';">
+    <td>East Champaran</td>
+    <td><c>[+0]</c>5</td>
+    <td><a>[+0]</a>5</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/gaya.html';">
+    <td>Gaya</td>
+    <td><c>[+0]</c>6</td>
+    <td><a>[+0]</a>1</td>
+	<td><r>[+0]</r>5</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/gopalganj.html';">
+    <td>Gopalganj</td>
+    <td><c>[+6]</c>18</td>
+    <td><a>[+0]</a>15</td>
+	<td><r>[+0]</r>3</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/jamui.html';">
+    <td>Jamui</td>
+    <td><c>[+3]</c>4</td>
+    <td><a>[+0]</a>4</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/jehanabad.html';">
+    <td>Jehanabad</td>
+	<td><c>[+3]</c>4</td>
+    <td><a>[+0]</a>4</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/kaimur.html';">
+    <td>Kaimur</td>
+	<td><c>[+4]</c>18</td>
+    <td><a>[+0]</a>18</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/katihar.html';">
+    <td>Katihar</td>
+	<td><c>[+0]</c></td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>    
+  </tr>
+  <tr onclick="window.location='districts/khagaria.html';">
+    <td>Khagaria</td>
+	<td><c>[+0]</c></td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>    
+  </tr>
+  <tr onclick="window.location='districts/kishanganj.html';">
+    <td>Kishanganj</td>
+	<td><c>[+0]</c></td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>    
+  </tr>
+  <tr onclick="window.location='districts/lakhisarai.html';">
+    <td>Lakhisarai</td>
+	<td><c>[+0]</c>4</td>
+    <td><a>[+0]</a>3</td>
+	<td><r>[+0]</r>1</td>
+	<td><d>[+0]</d>0</td>    
+  </tr>
+  <tr onclick="window.location='districts/madhepura.html';">
+    <td>Madhepura</td>
+	<td><c>[+0]</c>1</td>
+    <td><a>[+0]</a>1</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>    
+  </tr>
+  <tr onclick="window.location='districts/madhubani.html';">
+    <td>Madhubani</td>
+	<td><c>[+0]</c>5</td>
+    <td><a>[+0]</a>5</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>    
+  </tr>
+  <tr onclick="window.location='districts/munger.html';">
+    <td>Munger</td>
+    <td><c>[+2]</c>92</td>
+    <td><a>[+0]</a>80</td>
+	<td><r>[+0]</r>11</td>
+	<td><d>[+0]</d>1</td>
+  </tr>
+  <tr onclick="window.location='districts/muzaffarpur.html';">
+    <td>Muzaffarpur</td>
+    <td><c>[+0]</c>0</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/nalanda.html';">
+    <td>Nalanda</td>
+	<td><c>[+0]</c>35</td>
+    <td><a>[+0]</a>29</td>
+	<td><r>[+0]</r>6</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/nawada.html';">
+    <td>Nawada</td>
+	<td><c>[+0]</c>4</td>
+    <td><a>[+0]</a>2</td>
+	<td><r>[+0]</r>2</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/patna.html';">
+    <td>Patna</td>
+    <td><c>[+0]</c>39</td>
+    <td><a>[+0]</a>34</td>
+	<td><r>[+0]</r>5</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/purnea.html';">
+    <td>Purnea</td>
+    <td><c>[+0]</c>1</td>
+    <td><a>[+0]</a>1</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/rohtas.html';">
+    <td>Rohtas</td>
+    <td><c>[+0]</c>31</td>
+    <td><a>[+0]</a>31</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/saharsa.html';">
+    <td>Saharsa</td>
+    <td><c>[+0]</c>0</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/samastipur.html';">
+    <td>Samastipur</td>
+    <td><c>[+0]</c>0</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/saran.html';">
+    <td>Saran</td>
+    <td><c>[+0]</c>4</td>
+    <td><a>[+0]</a>3</td>
+	<td><r>[+0]</r>1</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/sheikhpura.html';">
+    <td>Sheikhpura</td>
+    <td><c>[+1]</c>1</td>
+    <td><a>[+0]</a>1</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/sheohar.html';">
+    <td>Sheohar</td>
+    <td><c>[+0]</c>0</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/sitamarhi.html';">
+    <td>Sitamarhi</td>
+    <td><c>[+1]</c>1</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/siwan.html';">
+    <td>Siwan</td>
+    <td><c>[+0]</c>30</td>
+    <td><a>[+0]</a>8</td>
+	<td><r>[+4]</r>22</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/supaul.html';">
+    <td>Supaul</td>
+    <td><c>[+0]</c>0</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  <tr onclick="window.location='districts/vaishali.html';">
+    <td>Vaishali</td>
+    <td><c>[+0]</c>2</td>
+    <td><a>[+0]</a>1</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>1</td>
+  </tr>
+  <tr onclick="window.location='districts/west-champaranhtml';">
+    <td>West Champaran</td>
+    <td><c>[+0]</c>0</td>
+    <td><a>[+0]</a>0</td>
+	<td><r>[+0]</r>0</td>
+	<td><d>[+0]</d>0</td>
+  </tr>
+  
+</table>
+
+  </div>
+  
+  <div class="column side">
+    
+  </div>
+</div>
+<div class="footer">
+  <p>Developed by <a target="_blank" href="https://www.linkedin.com/in/anand-kumar-verma/">Anand Kumar Verma.</a></p>  
+</div>
+</body>
 </html>
