@@ -1,7 +1,7 @@
 [
  {
    "district": "Araria",
-   "link": "district/Araria/index.html",
+   "link": "dummy.html",
    "new_confirmed": 0,
    "confirmed": 1,
    "active": 1,
@@ -10,7 +10,7 @@
  },
  {
    "district": "Arwal",
-   "link": "district/Arwal/index.html",
+   "link": "dummy.html",
    "new_confirmed": 0,
    "confirmed": 4,
    "active": 4,
