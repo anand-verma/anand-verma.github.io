@@ -24,59 +24,8 @@ body {
   
 }
 
-/* Style the topnav links */
-.topnav c {
-  background-color: white;
-  color: black;
-  border: 2px solid orange;
-  width : 24%;
-  text-align: center;
-  display: inline-block;
-}
 
-.topnav c:hover{
-  background-color: orange;
-  color: white;
-}
-.topnav a {
-  background-color: white;
-  color: black;
-  border: 2px solid blue;
-  width : 24%;
-  text-align: center;
-  display: inline-block;
-}
 
-.topnav a:hover{
-  background-color: blue;
-  color: white;
-}
-.topnav r {
-  background-color: white;
-  color: black;
-  border: 2px solid green;
-  width : 24%;
-  text-align: center;
-  display: inline-block;
-}
-
-.topnav r:hover{
-  background-color: green;
-  color: white;
-}
-.topnav d {
-  background-color: white;
-  color: black;
-  border: 2px solid red;
-  width : 24%;
-  text-align: center;
-  display: inline-block;
-}
-
-.topnav d:hover{
-  background-color: red;
-  color: white;
-}
 
 
 
@@ -112,7 +61,7 @@ body {
 
 .column.middle td {
   padding: 8px;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #ddd;
   /*font-size : 20px ;*/
 }
@@ -122,21 +71,57 @@ body {
 	cursor:pointer;
 }
 
-.column.middle c{
-  color: orange;
-  /*font-size : 15px ;*/
+.column.middle c {
+  background-color: white;
+  color: black;
+  border: 2px solid orange;
+  width : 24%;
+  text-align: center;
+  display: inline-block;
 }
-.column.middle a{
-  color: blue;
-  /*font-size : 0px ;*/
+
+.column.middle c:hover{
+  background-color: orange;
+  color: white;
 }
-.column.middle r{
-  color: green;
-  /*font-size : 15px ;*/
+.column.middle a {
+  background-color: white;
+  color: black;
+  border: 2px solid blue;
+  width : 24%;
+  text-align: center;
+  display: inline-block;
 }
-.column.middle d{
-  color: red;
-  /* font-size : 15px ; */
+
+.column.middle a:hover{
+  background-color: blue;
+  color: white;
+}
+.column.middle r {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  width : 24%;
+  text-align: center;
+  display: inline-block;
+}
+
+.column.middle r:hover{
+  background-color: green;
+  color: white;
+}
+.column.middle d {
+  background-color: white;
+  color: black;
+  border: 2px solid red;
+  width : 24%;
+  text-align: center;
+  display: inline-block;
+}
+
+.column.middle d:hover{
+  background-color: red;
+  color: white;
 }
 
 /* Clear floats after the columns */
