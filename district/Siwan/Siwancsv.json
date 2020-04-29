@@ -6,137 +6,17 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "JEERADEI"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
     "block": "ANDAR"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "2", 
     "district": "Siwan", 
     "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "SISWAN"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "GUTHANI"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "PACHRUKHI"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "DARAULI"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "GOREAKOTHI"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "BHAGWANPUR"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "HUSSAINGANJ"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "MAIRWA"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "DURAUNDHA"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "SIWAN"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
+    "recovered": "2", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "BARHARIA"
-},
-{
-    "confirmed": "0", 
-    "district": "Siwan", 
-    "link": "district/Siwan/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "RAGHUNATHPUR"
 },
 {
     "confirmed": "0", 
@@ -156,7 +36,77 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "MAHARAJGANJ"
+    "block": "BHAGWANPUR"
+},
+{
+    "confirmed": "1", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "1", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "DARAULI"
+},
+{
+    "confirmed": "0", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "DURAUNDHA"
+},
+{
+    "confirmed": "0", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "GOREAKOTHI"
+},
+{
+    "confirmed": "0", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "GUTHANI"
+},
+{
+    "confirmed": "1", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "1", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "HASANPURA"
+},
+{
+    "confirmed": "0", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "HUSSAINGANJ"
+},
+{
+    "confirmed": "0", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "JEERADEI"
 },
 {
     "confirmed": "0", 
@@ -176,7 +126,7 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "HASANPURA"
+    "block": "MAHARAJGANJ"
 },
 {
     "confirmed": "0", 
@@ -186,7 +136,37 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
+    "block": "MAIRWA"
+},
+{
+    "confirmed": "1", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "1", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
     "block": "NAUTAN"
+},
+{
+    "confirmed": "1", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "1", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "PACHRUKHI"
+},
+{
+    "confirmed": "23", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "12", 
+    "active": "11", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "RAGHUNATHPUR"
 },
 {
     "confirmed": "0", 
@@ -194,6 +174,26 @@
     "link": "district/Siwan/index.html", 
     "recovered": "0", 
     "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "SISWAN"
+},
+{
+    "confirmed": "1", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "0", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "SIWAN"
+},
+{
+    "confirmed": "30", 
+    "district": "Siwan", 
+    "link": "district/Siwan/index.html", 
+    "recovered": "18", 
+    "active": "12", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

@@ -9,11 +9,11 @@
     "block": "Bihpur"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "3", 
     "district": "Bhagalpur", 
     "link": "district/Bhagalpur/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "3", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Gauradih"
@@ -89,10 +89,10 @@
     "block": "Nathnagar"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Bhagalpur", 
     "link": "district/Bhagalpur/index.html", 
-    "recovered": "0", 
+    "recovered": "1", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
@@ -139,11 +139,11 @@
     "block": "Shahkund"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Bhagalpur", 
     "link": "district/Bhagalpur/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Sanhoula"
@@ -159,11 +159,11 @@
     "block": "Sultanganj Purushottam"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "5", 
     "district": "Bhagalpur", 
     "link": "district/Bhagalpur/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "recovered": "1", 
+    "active": "4", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

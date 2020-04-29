@@ -6,97 +6,17 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "HAJIPUR"
+    "block": "BHAGWANPUR"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Vaishali", 
     "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "RAGHOPUR"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
+    "recovered": "1", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "BIDUPUR"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "LALGANJ"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "VAISHALI"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "BHAGWANPUR"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "PATEDHI BELSAR"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "MAHNAR"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "SAHDEI"
-},
-{
-    "confirmed": "0", 
-    "district": "Vaishali", 
-    "link": "district/Vaishali/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "MAHUA"
 },
 {
     "confirmed": "0", 
@@ -116,7 +36,7 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "JANDAHA"
+    "block": "DESRI"
 },
 {
     "confirmed": "0", 
@@ -136,7 +56,77 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
+    "block": "HAJIPUR"
+},
+{
+    "confirmed": "0", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "JANDAHA"
+},
+{
+    "confirmed": "0", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "LALGANJ"
+},
+{
+    "confirmed": "0", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "MAHNAR"
+},
+{
+    "confirmed": "0", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "MAHUA"
+},
+{
+    "confirmed": "0", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "PATEDHI BELSAR"
+},
+{
+    "confirmed": "0", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
     "block": "PATEPUR"
+},
+{
+    "confirmed": "1", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "1", 
+    "block": "RAGHOPUR"
 },
 {
     "confirmed": "0", 
@@ -156,7 +146,7 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "DESRI"
+    "block": "SAHDEI"
 },
 {
     "confirmed": "0", 
@@ -166,6 +156,16 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
+    "block": "VAISHALI"
+},
+{
+    "confirmed": "2", 
+    "district": "Vaishali", 
+    "link": "district/Vaishali/index.html", 
+    "recovered": "1", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "1", 
     "block": "Total"
 }
 ]

@@ -6,17 +6,7 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "MUNGER SADAR"
-},
-{
-    "confirmed": "0", 
-    "district": "Munger", 
-    "link": "district/Munger/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "DHARAHARA"
+    "block": "ASARGANJ"
 },
 {
     "confirmed": "0", 
@@ -36,17 +26,7 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "JAMALPUR"
-},
-{
-    "confirmed": "0", 
-    "district": "Munger", 
-    "link": "district/Munger/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "TETIYA BAMBER"
+    "block": "DHARAHARA"
 },
 {
     "confirmed": "0", 
@@ -59,24 +39,24 @@
     "block": "HAVELI KHARAGPUR"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "82", 
     "district": "Munger", 
     "link": "district/Munger/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "recovered": "5", 
+    "active": "77", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "TARAPURA"
+    "block": "JAMALPUR"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "10", 
     "district": "Munger", 
     "link": "district/Munger/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "recovered": "6", 
+    "active": "3", 
     "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "ASARGANJ"
+    "deceased": "1", 
+    "block": "MUNGER SADAR"
 },
 {
     "confirmed": "0", 
@@ -96,6 +76,26 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
+    "block": "TARAPURA"
+},
+{
+    "confirmed": "0", 
+    "district": "Munger", 
+    "link": "district/Munger/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "TETIYA BAMBER"
+},
+{
+    "confirmed": "92", 
+    "district": "Munger", 
+    "link": "district/Munger/index.html", 
+    "recovered": "11", 
+    "active": "80", 
+    "new_confirmed": "0", 
+    "deceased": "1", 
     "block": "Total"
 }
 ]

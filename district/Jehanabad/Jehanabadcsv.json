@@ -1,19 +1,9 @@
 [{
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Jehanabad", 
     "link": "district/Jehanabad/index.html", 
     "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "Jehanabad"
-},
-{
-    "confirmed": "0", 
-    "district": "Jehanabad", 
-    "link": "district/Jehanabad/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Ghoshi"
@@ -29,11 +19,21 @@
     "block": "Hulasgunj"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "2", 
     "district": "Jehanabad", 
     "link": "district/Jehanabad/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "2", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "Jehanabad"
+},
+{
+    "confirmed": "1", 
+    "district": "Jehanabad", 
+    "link": "district/Jehanabad/index.html", 
+    "recovered": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Kako"
@@ -69,11 +69,11 @@
     "block": "Ratni Faridpur"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "4", 
     "district": "Jehanabad", 
     "link": "district/Jehanabad/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "4", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

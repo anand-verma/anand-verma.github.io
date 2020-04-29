@@ -6,16 +6,6 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "RAJAULI"
-},
-{
-    "confirmed": "0", 
-    "district": "Nawada", 
-    "link": "district/Nawada/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
     "block": "AKBARPUR"
 },
 {
@@ -26,37 +16,17 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "SIRDALA"
+    "block": "GOVINDPUR"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Nawada", 
     "link": "district/Nawada/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "KOWAKOLE"
-},
-{
-    "confirmed": "0", 
-    "district": "Nawada", 
-    "link": "district/Nawada/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "PAKARIBARAWAN"
-},
-{
-    "confirmed": "0", 
-    "district": "Nawada", 
-    "link": "district/Nawada/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "WARSALIGANJ"
+    "block": "HISUA"
 },
 {
     "confirmed": "0", 
@@ -76,7 +46,17 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "NAWADA"
+    "block": "KOWAKOLE"
+},
+{
+    "confirmed": "2", 
+    "district": "Nawada", 
+    "link": "district/Nawada/index.html", 
+    "recovered": "1", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "MESKAUR"
 },
 {
     "confirmed": "0", 
@@ -96,6 +76,46 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
+    "block": "NARHAT"
+},
+{
+    "confirmed": "1", 
+    "district": "Nawada", 
+    "link": "district/Nawada/index.html", 
+    "recovered": "1", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "NAWADA"
+},
+{
+    "confirmed": "0", 
+    "district": "Nawada", 
+    "link": "district/Nawada/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "PAKARIBARAWAN"
+},
+{
+    "confirmed": "0", 
+    "district": "Nawada", 
+    "link": "district/Nawada/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "RAJAULI"
+},
+{
+    "confirmed": "0", 
+    "district": "Nawada", 
+    "link": "district/Nawada/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
     "block": "ROH"
 },
 {
@@ -106,7 +126,7 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "MESKAUR"
+    "block": "SIRDALA"
 },
 {
     "confirmed": "0", 
@@ -116,34 +136,14 @@
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "GOVINDPUR"
+    "block": "WARSALIGANJ"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "4", 
     "district": "Nawada", 
     "link": "district/Nawada/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "NARHAT"
-},
-{
-    "confirmed": "0", 
-    "district": "Nawada", 
-    "link": "district/Nawada/index.html", 
-    "recovered": "0", 
-    "active": "0", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "HISUA"
-},
-{
-    "confirmed": "0", 
-    "district": "Nawada", 
-    "link": "district/Nawada/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "recovered": "2", 
+    "active": "2", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

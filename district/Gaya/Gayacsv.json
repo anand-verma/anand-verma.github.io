@@ -89,10 +89,10 @@
     "block": "Fatehpur"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "5", 
     "district": "Gaya", 
     "link": "district/Gaya/index.html", 
-    "recovered": "0", 
+    "recovered": "5", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
@@ -219,11 +219,11 @@
     "block": "Tankuppa"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Gaya", 
     "link": "district/Gaya/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Tekari"
@@ -239,11 +239,11 @@
     "block": "Wazirganj"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "6", 
     "district": "Gaya", 
     "link": "district/Gaya/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "recovered": "5", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

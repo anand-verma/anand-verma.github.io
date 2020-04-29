@@ -139,11 +139,11 @@
     "block": "Mehsi"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "4", 
     "district": "East Champaran", 
     "link": "district/East Champaran/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "4", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Motihari"
@@ -179,11 +179,11 @@
     "block": "Patahi"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "East Champaran", 
     "link": "district/East Champaran/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Phenhara"
@@ -269,11 +269,11 @@
     "block": "Bankatwa"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "5", 
     "district": "East Champaran", 
     "link": "district/East Champaran/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "5", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

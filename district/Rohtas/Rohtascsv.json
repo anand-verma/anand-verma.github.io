@@ -119,11 +119,11 @@
     "block": "NOKHA"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "2", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "2", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "RAJPUR"
@@ -149,21 +149,21 @@
     "block": "SANJHAULI"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "28", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "28", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "SASARAM"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "SHEOSAGAR"
@@ -189,11 +189,11 @@
     "block": "TILOUTHU"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "31", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "31", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

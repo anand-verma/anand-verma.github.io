@@ -9,31 +9,31 @@
     "block": "Agioan"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "7", 
     "district": "Bhojpur", 
     "link": "district/Bhojpur/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "7", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Ara Sadar"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Bhojpur", 
     "link": "district/Bhojpur/index.html", 
-    "recovered": "0", 
+    "recovered": "1", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Barhara"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Bhojpur", 
     "link": "district/Bhojpur/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Bihiya"
@@ -139,11 +139,11 @@
     "block": "Udwantnagar"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "9", 
     "district": "Bhojpur", 
     "link": "district/Bhojpur/index.html", 
-    "recovered": "0", 
-    "active": "0", 
+    "recovered": "1", 
+    "active": "8", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"
