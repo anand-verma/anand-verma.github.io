@@ -61,11 +61,11 @@
     "recovered": "1"
 }
 ,{
-    "confirmed": "26", 
+    "confirmed": "38", 
     "district": "Buxar", 
     "link": "district/Buxar/index.html", 
     "deceased": "0", 
-    "active": "25", 
+    "active": "37", 
     "new_confirmed": "0", 
     "recovered": "1"
 }
@@ -331,20 +331,20 @@
     "recovered": "0"
 }
 ,{
-    "confirmed": "0", 
+    "confirmed": "5", 
     "district": "West Champaran", 
     "link": "district/West Champaran/index.html", 
     "deceased": "0", 
-    "active": "0", 
+    "active": "5", 
     "new_confirmed": "0", 
     "recovered": "0"
 }
 ,{
-    "confirmed": "366", 
+    "confirmed": "383", 
     "district": "Bihar", 
     "link": "district/Bihar/index.html", 
     "deceased": "2", 
-    "active": "300", 
+    "active": "317", 
     "new_confirmed": "0", 
     "recovered": "64"
 }
