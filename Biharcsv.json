@@ -1,351 +1,391 @@
 [{
-    "confirmed": "1", 
+    "confirmed": "0", 
     "district": "Araria", 
     "link": "district/Araria/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-},{
-    "confirmed": "4", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Arwal", 
     "link": "district/Arwal/index.html", 
-    "deceased": "0", 
-    "active": "4", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "7", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Aurangabad", 
     "link": "district/Aurangabad/index.html", 
-    "deceased": "0", 
-    "active": "7", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "3", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Banka", 
     "link": "district/Banka/index.html", 
-    "deceased": "0", 
-    "active": "3", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "9", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Begusarai", 
     "link": "district/Begusarai/index.html", 
-    "deceased": "0", 
-    "active": "4", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "5"
-}
-,{
-    "confirmed": "5", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Bhagalpur", 
     "link": "district/Bhagalpur/index.html", 
-    "deceased": "0", 
-    "active": "4", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "1"
-}
-,{
-    "confirmed": "9", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Bhojpur", 
     "link": "district/Bhojpur/index.html", 
-    "deceased": "0", 
-    "active": "8", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "1"
-}
-,{
-    "confirmed": "38", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Buxar", 
     "link": "district/Buxar/index.html", 
-    "deceased": "0", 
-    "active": "37", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "1"
-}
-,{
-    "confirmed": "1", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Darbhanga", 
     "link": "district/Darbhanga/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "5", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "East Champaran", 
     "link": "district/East Champaran/index.html", 
-    "deceased": "0", 
-    "active": "5", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "6", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Gaya", 
     "link": "district/Gaya/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "5"
-}
-,{
-    "confirmed": "18", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Gopalganj", 
     "link": "district/Gopalganj/index.html", 
-    "deceased": "0", 
-    "active": "15", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "3"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Jamui", 
     "link": "district/Jamui/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "4", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Jehanabad", 
     "link": "district/Jehanabad/index.html", 
-    "deceased": "0", 
-    "active": "4", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "18", 
-    "district": "Kaimur", 
-    "link": "district/Kaimur/index.html", 
     "deceased": "0", 
-    "active": "18", 
-    "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Katihar", 
     "link": "district/Katihar/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Khagaria", 
     "link": "district/Khagaria/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Kishanganj", 
     "link": "district/Kishanganj/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "4", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Lakhisarai", 
     "link": "district/Lakhisarai/index.html", 
-    "deceased": "0", 
-    "active": "3", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "1"
-}
-,{
-    "confirmed": "1", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Madhepura", 
     "link": "district/Madhepura/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "5", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Madhubani", 
     "link": "district/Madhubani/index.html", 
-    "deceased": "0", 
-    "active": "5", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "92", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Munger", 
     "link": "district/Munger/index.html", 
-    "deceased": "1", 
-    "active": "80", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "11"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Muzaffarpur", 
     "link": "district/Muzaffarpur/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "35", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Nalanda", 
     "link": "district/Nalanda/index.html", 
-    "deceased": "0", 
-    "active": "29", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "6"
-}
-,{
-    "confirmed": "4", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Nawada", 
     "link": "district/Nawada/index.html", 
-    "deceased": "0", 
-    "active": "2", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "2"
-}
-,{
-    "confirmed": "39", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Patna", 
     "link": "district/Patna/index.html", 
-    "deceased": "0", 
-    "active": "34", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "5"
-}
-,{
-    "confirmed": "1", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Purnea", 
     "link": "district/Purnea/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "31", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
-    "deceased": "0", 
-    "active": "31", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Saharsa", 
     "link": "district/Saharsa/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Samastipur", 
     "link": "district/Samastipur/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "4", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Saran", 
     "link": "district/Saran/index.html", 
-    "deceased": "0", 
-    "active": "3", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "1"
-}
-,{
-    "confirmed": "1", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Sheikhpura", 
     "link": "district/Sheikhpura/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Sheohar", 
     "link": "district/Sheohar/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "1", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Sitamarhi", 
     "link": "district/Sitamarhi/index.html", 
-    "deceased": "0", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "30", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Siwan", 
     "link": "district/Siwan/index.html", 
-    "deceased": "0", 
-    "active": "8", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "22"
-}
-,{
+    "deceased": "0", 
+    "block": "Total"
+},
+{
     "confirmed": "0", 
     "district": "Supaul", 
     "link": "district/Supaul/index.html", 
-    "deceased": "0", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "2", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Vaishali", 
     "link": "district/Vaishali/index.html", 
-    "deceased": "1", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "5", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "West Champaran", 
     "link": "district/West Champaran/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
     "deceased": "0", 
-    "active": "5", 
-    "new_confirmed": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "383", 
+    "block": "Total"
+},
+{
+    "confirmed": "0", 
     "district": "Bihar", 
-    "link": "district/Bihar/index.html", 
-    "deceased": "2", 
-    "active": "317", 
+    "link": "index.html", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
-    "recovered": "64"
+    "deceased": "0", 
+    "block": "Total"
 }
 ]

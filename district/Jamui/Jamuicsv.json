@@ -1,97 +1,107 @@
 [{
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Araria"
+    "block": "Barhat"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Bhargama"
+    "block": "Chakai"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Forbesganj"
+    "block": "Gidhaur"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Jokihat"
+    "block": "Isalmanagar Aliganj"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Kursakanta"
+    "block": "Jamui"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Narpatganj"
+    "block": "Jhajha"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Palasi"
+    "block": "Khaira"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Raniganj"
+    "block": "Laxmipur"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Sikti"
+    "block": "Sikandra"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "Sono"
+},
+{
+    "confirmed": "0", 
+    "district": "Jamui", 
+    "link": "district/Jamui/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 

@@ -1,97 +1,107 @@
 [{
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Araria"
+    "block": "KAHRA"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Bhargama"
+    "block": "SATTAR KATIYA"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Forbesganj"
+    "block": "SAUR BAZAR"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Jokihat"
+    "block": "PATARGHAT"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Kursakanta"
+    "block": "MAHISHI"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Narpatganj"
+    "block": "SONBARSA"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Palasi"
+    "block": "NAUHATTA"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Raniganj"
+    "block": "SALKHUA"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "block": "Sikti"
+    "block": "BANMA ITAHRI"
 },
 {
     "confirmed": "0", 
-    "district": "Araria", 
-    "link": "district/Araria/index.html", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "SIMRI BAKHTIYARPUR"
+},
+{
+    "confirmed": "0", 
+    "district": "Saharsa", 
+    "link": "district/Saharsa/index.html", 
     "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 

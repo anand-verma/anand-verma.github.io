@@ -1,108 +1,121 @@
 [{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Adhaura", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-},{
-    "confirmed": "8", 
-    "link": "index.html", 
-    "block": "Bhabhua", 
-    "active": "8", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Adhaura"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Bhagwanpur", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "10", 
-    "link": "index.html", 
-    "block": "Chainpur", 
-    "active": "10", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Bhabhua"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Chand", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Bhagwanpur"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Durgawati", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Chainpur"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Kudra", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Chand"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Mohania", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Durgawati"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Nuawon", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Kudra"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Ramgarh", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
+    "block": "Mohania"
+},
+{
     "confirmed": "0", 
-    "link": "index.html", 
-    "block": "Rampur", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
     "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
-}
-,{
-    "confirmed": "18", 
-    "link": "index.html", 
-    "block": "Total", 
-    "active": "18", 
+    "block": "Nuawon"
+},
+{
+    "confirmed": "0", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
+    "active": "0", 
     "new_confirmed": "0", 
     "deceased": "0", 
-    "recovered": "0"
+    "block": "Ramgarh"
+},
+{
+    "confirmed": "0", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "Rampur"
+},
+{
+    "confirmed": "0", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "Total"
 }
 ]
