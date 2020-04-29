@@ -1,0 +1,216 @@
+[{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "ATHMALGOLA", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+},{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "BAKHTIARPUR", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "BARH", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "BELCHHI", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "BIHTA", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "BIKRAM", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "DANAPUR", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "DANIYAWAAN", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "DHANARUA", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "DULHIN BAZAR", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "FATUHA", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "GHOSWARI", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "KHUSRUPUR", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "MANER", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "2", 
+    "link": "index.html", 
+    "block": "MASAURHI", 
+    "active": "2", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "MOKAMA", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "NAUBATPUR", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "PALIGANJ", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "PANDARAK", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "33", 
+    "link": "index.html", 
+    "block": "PATNA SADAR", 
+    "active": "31", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "2"
+}
+,{
+    "confirmed": "2", 
+    "link": "index.html", 
+    "block": "PHULWARI SHARIF", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "1"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "PUNPUN", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "2", 
+    "link": "index.html", 
+    "block": "SAMPATCHAK", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "2"
+}
+,{
+    "confirmed": "39", 
+    "link": "index.html", 
+    "block": "Total", 
+    "active": "34", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "5"
+}
+]

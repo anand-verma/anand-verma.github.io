@@ -1,8 +1,8 @@
 import csv
 import json
 
-csvfile = open('bihar.csv', 'r')
-jsonfile = open('Biharcsv.json', 'w')
+csvfile = open('district/Kaimur/Kaimur.csv', 'r')
+jsonfile = open('district/Kaimur/Kaimurcsv.json', 'w')
 
 reader1 = csv.reader(csvfile)
 header = tuple(next(reader1))  # gets the first line

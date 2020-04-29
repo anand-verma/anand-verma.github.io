@@ -1,0 +1,54 @@
+[{
+    "confirmed": "3", 
+    "link": "index.html", 
+    "block": "Arwal", 
+    "active": "3", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+},{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Sonbhadra Banshi Surypur", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Kaler", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Karpi", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "1", 
+    "link": "index.html", 
+    "block": "Kurtha", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "4", 
+    "link": "index.html", 
+    "block": "Total", 
+    "active": "4", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+]

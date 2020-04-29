@@ -1,0 +1,108 @@
+[{
+    "confirmed": "1", 
+    "link": "index.html", 
+    "block": "Amarpur", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+},{
+    "confirmed": "1", 
+    "link": "index.html", 
+    "block": "Banka", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Barahat", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Belhar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Bounsi", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Chandan", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Dhoraiya", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Fullidumar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Katoriya", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Rajoun", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Shambhuganj", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "2", 
+    "link": "index.html", 
+    "block": "Total", 
+    "active": "2", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+]

@@ -1,0 +1,108 @@
+[{
+    "confirmed": "7", 
+    "link": "index.html", 
+    "block": "Aurangabad", 
+    "active": "7", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+},{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Barun", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Daudnagar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Deo", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Goh", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Haspura", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Kutumba", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Madanpur", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Nabinagar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Obra", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Rafiganj", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "7", 
+    "link": "index.html", 
+    "block": "Total", 
+    "active": "7", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+]
