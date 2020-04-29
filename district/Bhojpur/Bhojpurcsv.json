@@ -1,0 +1,135 @@
+[{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Agioan", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+},{
+    "confirmed": "7", 
+    "link": "index.html", 
+    "block": "Ara Sadar", 
+    "active": "7", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "1", 
+    "link": "index.html", 
+    "block": "Barhara", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "1"
+}
+,{
+    "confirmed": "1", 
+    "link": "index.html", 
+    "block": "Bihiya", 
+    "active": "1", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Charpokhri", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Garhani", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Jagdishpur", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Koilwar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Piro", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Sahar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Sandesh", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Shahpur", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Tarari", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "0", 
+    "link": "index.html", 
+    "block": "Udwantnagar", 
+    "active": "0", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "0"
+}
+,{
+    "confirmed": "9", 
+    "link": "index.html", 
+    "block": "Total", 
+    "active": "8", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "recovered": "1"
+}
+]
