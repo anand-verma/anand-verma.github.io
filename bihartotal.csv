@@ -58,18 +58,6 @@ Begusarai,Sahebpur Kamal,district/Begusarai/index.html,0,0,0,0,0
 Begusarai,Samho-Akaha-Kurha,district/Begusarai/index.html,0,0,0,0,0
 Begusarai,Teghra,district/Begusarai/index.html,0,3,2,1,0
 Begusarai,Total,district/Begusarai/index.html,0,9,4,5,0
-Bhabhua Kaimur,Adhaura,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Bhabhua,district/Kaimur/index.html,0,8,8,0,0
-Bhabhua Kaimur,Bhagwanpur,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Chainpur,district/Kaimur/index.html,0,10,10,0,0
-Bhabhua Kaimur,Chand,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Durgawati,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Kudra,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Mohania,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Nuawon,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Ramgarh,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Rampur,district/Kaimur/index.html,0,0,0,0,0
-Bhabhua Kaimur,Total,district/Kaimur/index.html,0,18,18,0,0
 Bhagalpur,Bihpur,district/Bhagalpur/index.html,0,0,0,0,0
 Bhagalpur,Gauradih,district/Bhagalpur/index.html,0,3,3,0,0
 Bhagalpur,Gopalpur,district/Bhagalpur/index.html,0,0,0,0,0
@@ -220,6 +208,18 @@ Jehanabad,Makhdumpur,district/Jehanabad/index.html,0,0,0,0,0
 Jehanabad,Modanganj,district/Jehanabad/index.html,0,0,0,0,0
 Jehanabad,Ratni Faridpur,district/Jehanabad/index.html,0,0,0,0,0
 Jehanabad,Total,district/Jehanabad/index.html,0,4,4,0,0
+Kaimur,Adhaura,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Bhabhua,district/Kaimur/index.html,0,8,8,0,0
+Kaimur,Bhagwanpur,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Chainpur,district/Kaimur/index.html,0,10,10,0,0
+Kaimur,Chand,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Durgawati,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Kudra,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Mohania,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Nuawon,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Ramgarh,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Rampur,district/Kaimur/index.html,0,0,0,0,0
+Kaimur,Total,district/Kaimur/index.html,0,18,18,0,0
 Katihar,Amdabad,district/Katihar/index.html,0,0,0,0,0
 Katihar,Azamnagar,district/Katihar/index.html,0,0,0,0,0
 Katihar,Balrampur,district/Katihar/index.html,0,0,0,0,0
@@ -571,4 +571,4 @@ West Champaran,RAMNAGAR,district/West Champaran/index.html,0,0,0,0,0
 West Champaran,SIKTA,district/West Champaran/index.html,0,0,0,0,0
 West Champaran,THAKARAHA,district/West Champaran/index.html,0,0,0,0,0
 West Champaran,Total,district/West Champaran/index.html,0,0,0,0,0
-Bihar,Total,index.html,0,366,303,61,2
+Bihar,Total,index.html,0,330,276,52,2

@@ -49,16 +49,6 @@
     "block": "Total"
 },
 {
-    "confirmed": "18", 
-    "district": "Bhabhua Kaimur", 
-    "link": "district/Kaimur/index.html", 
-    "recovered": "0", 
-    "active": "18", 
-    "new_confirmed": "0", 
-    "deceased": "0", 
-    "block": "Total"
-},
-{
     "confirmed": "5", 
     "district": "Bhagalpur", 
     "link": "district/Bhagalpur/index.html", 
@@ -144,6 +134,16 @@
     "link": "district/Jehanabad/index.html", 
     "recovered": "0", 
     "active": "4", 
+    "new_confirmed": "0", 
+    "deceased": "0", 
+    "block": "Total"
+},
+{
+    "confirmed": "18", 
+    "district": "Kaimur", 
+    "link": "district/Kaimur/index.html", 
+    "recovered": "0", 
+    "active": "18", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"
@@ -379,11 +379,11 @@
     "block": "Total"
 },
 {
-    "confirmed": "366", 
+    "confirmed": "330", 
     "district": "Bihar", 
     "link": "index.html", 
-    "recovered": "61", 
-    "active": "303", 
+    "recovered": "52", 
+    "active": "276", 
     "new_confirmed": "0", 
     "deceased": "2", 
     "block": "Total"
