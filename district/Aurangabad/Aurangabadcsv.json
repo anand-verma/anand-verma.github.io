@@ -1,9 +1,9 @@
 [{
-    "confirmed": "4", 
+    "confirmed": "5", 
     "district": "Aurangabad", 
     "link": "district/Aurangabad/index.html", 
     "recovered": "0", 
-    "active": "4", 
+    "active": "5", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Aurangabad"
@@ -109,11 +109,11 @@
     "block": "Rafiganj"
 },
 {
-    "confirmed": "7", 
+    "confirmed": "8", 
     "district": "Aurangabad", 
     "link": "district/Aurangabad/index.html", 
     "recovered": "0", 
-    "active": "7", 
+    "active": "8", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

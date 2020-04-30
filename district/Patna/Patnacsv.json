@@ -159,21 +159,21 @@
     "block": "MOKAMA"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Patna", 
     "link": "district/Patna/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "NAUBATPUR"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Patna", 
     "link": "district/Patna/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "PALIGANJ"
@@ -189,11 +189,11 @@
     "block": "PANDARAK"
 },
 {
-    "confirmed": "33", 
+    "confirmed": "34", 
     "district": "Patna", 
     "link": "district/Patna/index.html", 
     "recovered": "2", 
-    "active": "31", 
+    "active": "32", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "PATNA SADAR"
@@ -229,11 +229,11 @@
     "block": "SAMPATCHAK"
 },
 {
-    "confirmed": "39", 
+    "confirmed": "42", 
     "district": "Patna", 
     "link": "district/Patna/index.html", 
     "recovered": "5", 
-    "active": "34", 
+    "active": "37", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

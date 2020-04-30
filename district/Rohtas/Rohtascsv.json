@@ -149,11 +149,11 @@
     "block": "SANJHAULI"
 },
 {
-    "confirmed": "28", 
+    "confirmed": "31", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
     "recovered": "0", 
-    "active": "28", 
+    "active": "31", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "SASARAM"
@@ -189,11 +189,11 @@
     "block": "TILOUTHU"
 },
 {
-    "confirmed": "31", 
+    "confirmed": "34", 
     "district": "Rohtas", 
     "link": "district/Rohtas/index.html", 
     "recovered": "0", 
-    "active": "31", 
+    "active": "34", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

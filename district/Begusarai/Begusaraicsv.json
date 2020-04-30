@@ -19,11 +19,11 @@
     "block": "Bakhri"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Begusarai", 
     "link": "district/Begusarai/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Balia"
@@ -39,11 +39,11 @@
     "block": "Barauni"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "1", 
     "district": "Begusarai", 
     "link": "district/Begusarai/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Begusarai"
@@ -179,11 +179,11 @@
     "block": "Teghra"
 },
 {
-    "confirmed": "9", 
+    "confirmed": "11", 
     "district": "Begusarai", 
     "link": "district/Begusarai/index.html", 
     "recovered": "5", 
-    "active": "4", 
+    "active": "6", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

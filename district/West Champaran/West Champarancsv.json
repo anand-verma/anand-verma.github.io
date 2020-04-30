@@ -29,11 +29,11 @@
     "block": "BAIRIYA"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "5", 
     "district": "West Champaran", 
     "link": "district/West Champaran/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "5", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "BETTIAH"
@@ -179,11 +179,11 @@
     "block": "THAKARAHA"
 },
 {
-    "confirmed": "0", 
+    "confirmed": "5", 
     "district": "West Champaran", 
     "link": "district/West Champaran/index.html", 
     "recovered": "0", 
-    "active": "0", 
+    "active": "5", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"

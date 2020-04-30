@@ -49,11 +49,11 @@
     "block": "Biraul"
 },
 {
-    "confirmed": "1", 
+    "confirmed": "5", 
     "district": "Darbhanga", 
     "link": "district/Darbhanga/index.html", 
     "recovered": "0", 
-    "active": "1", 
+    "active": "5", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Darbhanga"
@@ -179,11 +179,11 @@
     "block": "Tardih"
 },
 {
-    "confirmed": "1", 
+    "confirmed": "5", 
     "district": "Darbhanga", 
     "link": "district/Darbhanga/index.html", 
     "recovered": "0", 
-    "active": "1", 
+    "active": "5", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "Total"
