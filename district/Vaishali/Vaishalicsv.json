@@ -12,8 +12,8 @@
     "confirmed": "1", 
     "district": "Vaishali", 
     "link": "district/Vaishali/index.html", 
-    "recovered": "1", 
-    "active": "0", 
+    "recovered": "0", 
+    "active": "1", 
     "new_confirmed": "0", 
     "deceased": "0", 
     "block": "BIDUPUR"
@@ -162,8 +162,8 @@
     "confirmed": "3", 
     "district": "Vaishali", 
     "link": "district/Vaishali/index.html", 
-    "recovered": "1", 
-    "active": "1", 
+    "recovered": "0", 
+    "active": "2", 
     "new_confirmed": "0", 
     "deceased": "1", 
     "block": "Total"
