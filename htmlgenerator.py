@@ -23,6 +23,16 @@ for row in reader:
 	htmltxt = '''<!DOCTYPE html>
 	<html lang="en">
 	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164997550-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-164997550-1');
+	</script>
+
 	<title>Corona in Bihar</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
