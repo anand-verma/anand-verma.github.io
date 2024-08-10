@@ -5,6 +5,7 @@
     gap: 30px;
     padding: 20px;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 .profile-image {
@@ -12,7 +13,27 @@
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 20px; /* Add spacing below image on smaller screens */
 }
+
+.intro-text {
+    text-align: center; /* Center text on smaller screens */
+    max-width: 500px;
+}
+
+@media (min-width: 768px) {
+    .intro-section {
+        flex-wrap: nowrap;
+        text-align: left; /* Align text to the left on larger screens */
+    }
+    .profile-image {
+        margin-bottom: 0; /* Remove margin below image on larger screens */
+    }
+    .intro-text {
+        text-align: left; /* Align text to the left on larger screens */
+    }
+}
+
 
 .intro-text h2 {
     font-family: 'Kalam', cursive;
