@@ -1,0 +1,112 @@
+body {
+    background-color: #f7fff7;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Kalam', cursive;
+    color: purple;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 26px; }
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+/* Navbar Styles */
+.navbar {
+    background-color: #ddffdd;
+    border-bottom: 6px solid green;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 32px;
+    color: purple;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 26px;
+    color: purple;
+    margin: 0 10px;
+}
+
+/* Main Styles */
+.main-content {
+    background-color: #f1fff1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.intro-section {
+    border-radius: 10px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Circular Links Styles */
+.circular-links {
+    margin: 30px;
+}
+
+.circle-link {
+    width: 125px;
+    height: 125px;
+    line-height: 125px;
+    background-color: #defdde;
+    color: purple;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.circle-link:hover {
+    transform: scale(1.3);
+    font-weight: bold;
+    background-color: #f1fff1;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ddffdd;
+    border-top: 6px solid green;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .intro-section {
+        text-align: center;
+    }
+
+    .intro-section .col-md-4 {
+        order: 1;
+    }
+
+    .intro-section .col-md-8 {
+        order: 2;
+    }
+}

@@ -1,0 +1,21 @@
+/* Tool Box Styles */
+.tool-box {
+    background-color: #defdde;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.tool-box:hover {
+    transform: scale(1.2);
+    background-color: #f1fff1;
+}
+
+.tool-box i {
+    color: purple;
+}
+
+.tool-box h3 {
+    font-size: 20px;
+    color: purple;
+    margin-top: 10px;
+}
