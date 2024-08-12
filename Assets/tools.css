@@ -6,8 +6,9 @@
 }
 
 .tool-box:hover {
-    transform: scale(1.2);
-    background-color: #f1fff1;
+    transform: scale(1.05);
+    font-weight: bold;
+    background-color: rgba(128, 0, 128, 0.1);
 }
 
 .tool-box i {
