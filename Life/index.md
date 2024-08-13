@@ -1,5 +1,5 @@
 ---
-title: Index of all blogs  #manadatory
+title: Index of all blogs 
 description: A collection of my blog posts on various topics.  
 blogs:  
   - dark-chapter.md
