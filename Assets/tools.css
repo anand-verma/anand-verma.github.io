@@ -1,6 +1,6 @@
 /* Tool Box Styles */
 .tool-box {
-    background-color: #defdde;
+    background-color: rgba(0, 255, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
