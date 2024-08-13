@@ -13,12 +13,21 @@ h1, h2, h3 {
 
 h1 { font-size: 40px; }
 h2 { font-size: 32px; }
-h3 { font-size: 26px; }
+h3 { font-size: 28px; }
 
 a {
     text-decoration: none;
     color: purple;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 18px;
+}
+
 /* Navbar Styles */
 .navbar {
     background-color: #ddffdd;
