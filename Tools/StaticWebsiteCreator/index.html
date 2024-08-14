@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="/Assets/style.css">
     <link rel="stylesheet" href="/Assets/tools.css">
+    <style>
+        .spinner-border {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -26,63 +31,36 @@
             </div>
         </div>
     </nav>
-
     <main class="main-content py-4">
         
-        <div class="container">
-            
-            <div class="row">
-                <h1 class="text-center mb-4">Apps</h1>
-                
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="./StaticWebsiteCreator/">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                            <h3 class="mt-3">Create Personal Website</h3>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="./bookmarkonenotepdf/">
-                            <i class="fas fa-chart-bar fa-3x"></i>
-                            <h3 class="mt-3">Add Bookmark to Onenote PDF</h3>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="./TempFileUpload/">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                            <h3 class="mt-3">File upload and share</h3>
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="container" >
+    
+            <h1>Create Your Own Personal Website in 1 Click!</h1>
+            <p>Yes! You heard right. Get your own personal website loaded with blogging feature and tags enabled. It will be similar to the website you are visiting now. Provide below information, and your website will be ready within seconds.</p>
+            <p>This tool create static website using Html and Javascript. You can host it anywhere. Contents are managed using markdown file available in each directory.</p>
+            <p>Try it now!!</p>
             <hr>
-            <div class="row">
-                <h1 class="text-center mb-4">Scripts</h1>
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="https://github.com/anand-verma/Awesome-Tools/blob/main/UPSC_CSE_QCAB_Generator.ipynb">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                            <h3 class="mt-3">UPSC CSE QCAB Generator</h3>
-                        </a>
-                    </div>
+            <form id="websiteForm">
+                <div class="mb-3">
+                    <label for="websiteTitle">Website Title</label>
+                    <input type="text" class="form-control" id="websiteTitle" name="websiteTitle" required>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="https://github.com/anand-verma/Awesome-Tools/blob/main/Add_Bookmark_to_Onenote_exported_PDF.ipynb">
-                            <i class="fas fa-chart-bar fa-3x"></i>
-                            <h3 class="mt-3">Add Bookmark to Onenote PDF</h3>
-                        </a>
-                    </div>
+                <div class="mb-3">
+                    <label for="intro">Tell briefly about youself</label>
+                    <textarea class="form-control" id="intro" name="intro" rows="3" required></textarea>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="profilePicture">Profile Picture (In .jpg format)</label>
+                    <input type="file" class="form-control" id="profilePicture" name="profilePicture" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3 mb-md-0" id="createWebsiteButton" style="background-color: purple; margin: 10px; ">Create Website</button>
+            </form>
 
+            <div id="progress-bar" class="progress mb-3 mb-md-0" style="display: none;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p> </p>
+            <button type="button" class="btn btn-success mb-3 mb-md-0" id="downloadButton" style="background-color: purple; margin: 10px;" disabled>Download Website</button>
         </div>
     </main>
 
@@ -99,6 +77,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
