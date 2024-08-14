@@ -121,7 +121,7 @@ function handlePopState(event) {
 // Main function to orchestrate the process
 async function main() {
     try {
-        blogByTags = await getBlogByTags("/Life/index.md");
+        blogByTags = await getBlogByTags("blogindex.md");
         renderTags();
 
         // Handle initial rendering based on URL parameters
