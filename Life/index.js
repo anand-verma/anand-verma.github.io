@@ -97,7 +97,7 @@ function fetchAndRenderBlog(blogFile) {
         .then(response => response.text())
         .then(data => {
             const parsedContent = md.render(data.replace(/---([\s\S]+?)---/, ''));
-            blogContainer.innerHTML = `<div class="blog-card p-3">${parsedContent}</div>`;
+            blogContainer.innerHTML = `<div class="blog-card">${parsedContent}</div>`;
             document.getElementById("body-header").innerHTML = '';
         })
         .catch(error => console.error('Error fetching blog file:', error));
@@ -121,7 +121,7 @@ function handlePopState(event) {
 // Main function to orchestrate the process
 async function main() {
     try {
-        blogByTags = await getBlogByTags("blogindex.md");
+        blogByTags = await getBlogByTags("index.md");
         renderTags();
 
         // Handle initial rendering based on URL parameters

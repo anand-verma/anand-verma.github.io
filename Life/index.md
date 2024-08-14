@@ -6,8 +6,6 @@ blogs:
   - blog1.md
   - blog2.md
   - blog3.md
-imageurl: "https://cdn.example.net/banner.jpg"
-relativeurl: "./images/banner.jpg"
 ---
 # My Blog Post
 Content goes here...

@@ -52,7 +52,7 @@ p {
     background-color: #f1fff1;
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 20px;
+    padding: 2px;
 }
 
 .intro-section {
@@ -89,7 +89,7 @@ p {
 }
 
 .circle-link:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     font-weight: bold;
     background-color: rgba(128, 0, 128, 0.1);
 }
