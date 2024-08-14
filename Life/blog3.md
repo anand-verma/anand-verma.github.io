@@ -1,15 +1,3 @@
----
-title: काला अध्याय  #manadatory
-description: हर किसी के पास यादों का जखीरा होता हैं। कुछ यादें मीठी  होती हैं वहीं कुछ यादें खट्टी। लेकिन कुछ यादें काली भी होती हैं।  
-author: Anand Verma
-date: 29/09/2022  
-tags:  
-  - Life
-  - Love
-imageurl: "https://hd.wallpaperswide.com/thumbs/life_in_a_bottle_2-t2.jpg"
-relativeurl: "./images/banner.jpg"
----
-
 # काला अध्याय
 
 29/09/2022, Patna
