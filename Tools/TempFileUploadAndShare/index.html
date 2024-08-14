@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - Anand Kumar Verma</title>
+    <link rel="shortcut icon" href="/Assets/logo.svg" type="image/gif" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/style.css">
+    <link rel="stylesheet" href="/Assets/tools.css">
+    <style>
+        .spinner-border {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Anand K Verma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/Life/">Life</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/Tools/">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/About/">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content py-4">
+        
+        <div class="container" >
+            
+            <div class="card border-primary" >
+                <div class="card-header text-white" style="background-color: purple;">File Upload</div>
+                <div class="card-body" >
+                    <form id="uploadForm">
+                        <div class="mb-3">
+                            <label for="fileInput" class="form-label">Select File</label>
+                            <input type="file" class="form-control" id="fileInput" name="file">
+                            <div class="invalid-feedback" id="fileError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitButton" style="background-color: purple;">
+                            <span id="buttonText">Upload</span>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="loadingSpinner"></span>
+                        </button>
+                    </form>
+    
+                    <div class="mt-3" id="responseDiv">
+                        <p id="responseMessage"></p>
+                        <div id="urlContainer" class="d-none">
+                            <label for="fileUrl" class="form-label">Uploaded File URL:</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="fileUrl" readonly>
+                                <button class="btn btn-outline-secondary" type="button" id="copyButton">Copy</button>
+                            </div>
+                            <a id="downloadButton" href="#" class="btn btn-success" target="_blank">Download File</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer py-3">
+        <div class="container row align-items-center text-center">
+            <div class="col-md-6 mb-3 mb-md-0"> 
+                <p>Find me on:</p>
+                <a href="https://www.linkedin.com/in/anand-kumar-verma/" class="text-decoration-none mx-3"><i class="fab fa-linkedin" style="color: purple;"></i></a>
+                <a href="https://www.instagram.com/anand.kumar.verma/" class="text-decoration-none mx-3"><i class="fab fa-instagram" style="color: purple;"></i></a>
+            </div>
+            <div class="col-md-6"> 
+                <p class="mt-3">&copy; 2024 by Anand. Made with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const fileInput = document.getElementById('fileInput');
+        const submitButton = document.getElementById('submitButton');
+        const buttonText = document.getElementById('buttonText');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const responseMessage = document.getElementById('responseMessage');
+        const fileError = document.getElementById('fileError');
+        const urlContainer = document.getElementById('urlContainer');
+        const fileUrl = document.getElementById('fileUrl');
+        const copyButton = document.getElementById('copyButton');
+        const downloadButton = document.getElementById('downloadButton');
+
+        uploadForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            submitButton.disabled = true;
+            loadingSpinner.style.display = 'inline-block'; // Show loading spinner
+            buttonText.textContent = 'Uploading...';
+            fileError.textContent = ''; 
+
+            const file = fileInput.files[0];
+
+            if (!file) {
+                fileError.textContent = 'Please select a file to upload.';
+                submitButton.disabled = false;
+                loadingSpinner.style.display = 'none';
+                buttonText.textContent = 'Upload';
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('https://tmpfiles.org/api/v1/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    responseMessage.textContent = 'Upload successful!';
+                    fileUrl.value = `https://tmpfiles.org/dl${new URL(data.data.url).pathname}`;
+                    downloadButton.href = `https://tmpfiles.org/dl${new URL(data.data.url).pathname}`;
+                    urlContainer.classList.remove('d-none'); // Show the URL container
+                } else {
+                    responseMessage.textContent = `Error: ${data.error}`;
+                }
+            } catch (error) {
+                responseMessage.textContent = 'Upload failed. Please try again.';
+            } finally {
+                submitButton.disabled = false;
+                loadingSpinner.style.display = 'none'; // Hide loading spinner
+                buttonText.textContent = 'Upload';
+            }
+        });
+
+        copyButton.addEventListener('click', () => {
+            fileUrl.select();
+            fileUrl.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                document.execCommand('copy');
+                responseMessage.textContent = 'URL copied to clipboard!';
+            } catch (error) {
+                responseMessage.textContent = 'Failed to copy the URL.';
+            }
+        });
+    </script>
+</body>
+</html>
