@@ -3,6 +3,7 @@ const progressBar = document.getElementById('progress-bar');
 const progressBarElement = progressBar.querySelector('.progress-bar');
 const createWebsiteButton = document.getElementById('createWebsiteButton');
 const downloadButton = document.getElementById('downloadButton');
+const iframe = document.getElementById('myIframe');
 let websiteContent = null;
 
 websiteForm.addEventListener('submit', async (event) => {
@@ -39,9 +40,13 @@ websiteForm.addEventListener('submit', async (event) => {
         progressBarElement.setAttribute('aria-valuenow', 100);
         progressBar.style.display = 'none';
         const messageElement = document.createElement('p');
-        messageElement.textContent = 'Your website is ready!';
+        messageElement.textContent = 'Your website is ready to download!';
+
         downloadButton.parentElement.appendChild(messageElement);
         downloadButton.disabled = false;
+
+        fetchAndRender('./SampleTheme/index.html', './SampleTheme/style.css', websiteTitle, introduction, profilePicture );
+
     } catch (error) {
         console.error('Error:', error);
         // Handle error, e.g., display an error message to the user
@@ -49,6 +54,37 @@ websiteForm.addEventListener('submit', async (event) => {
         progressBar.style.display = 'none';
     }
 });
+
+function fetchAndRender(htmlPath, cssPath, websiteTitle, introduction, profilePicture) {
+  
+  const photoURL = URL.createObjectURL(profilePicture);
+  const data = { websiteTitle, introduction };
+   
+  
+  Promise.all([
+    fetch(htmlPath),
+    fetch(cssPath)
+  ])
+  .then(([htmlResponse, cssResponse]) => Promise.all([htmlResponse.text(), cssResponse.text()]))
+  .then(([htmlContent, cssContent]) => {
+    // Encode CSS to Base64
+    const base64Css = btoa(cssContent);
+
+    // Inject Base64 encoded CSS into HTML
+    const styleTag = `<link rel="stylesheet" href="data:text/css;base64,${base64Css}">`;
+    htmlContent = htmlContent.replace(/<head>/i, `<head>${styleTag}`);
+    htmlContent = htmlContent.replace('./Images/profile.jpg', photoURL);
+    const modifiedContent = Mustache.render(htmlContent, data);
+
+    // Render HTML within iframe
+    iframe.srcdoc = modifiedContent;
+  })
+  .catch(error => {
+    console.error('Error fetching or processing content:', error);
+  });
+}
+
+
 
 downloadButton.addEventListener('click', () => {
     const link = document.createElement('a');
