@@ -32,7 +32,7 @@ function renderBlogPosts(blogPosts) {
 // Function to render tags
 function renderTags() {
     tagContainer.innerHTML = "";
-    tagDropdown.innerHTML = `<option value="All">All</option>`;
+    tagDropdown.innerHTML = `<option value="All">Select Tag</option>`;
 
     const allTags = Object.keys(blogByTags).sort();
 
@@ -99,6 +99,7 @@ function fetchAndRenderBlog(blogFile) {
             const parsedContent = md.render(data.replace(/---([\s\S]+?)---/, ''));
             blogContainer.innerHTML = `<div class="blog-card">${parsedContent}</div>`;
             document.getElementById("body-header").innerHTML = '';
+            renderTags();
         })
         .catch(error => console.error('Error fetching blog file:', error));
 }
