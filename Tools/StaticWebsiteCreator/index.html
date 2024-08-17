@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="/Assets/style.css">
     <link rel="stylesheet" href="/Assets/tools.css">
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -26,61 +27,41 @@
             </div>
         </div>
     </nav>
-
     <main class="main-content py-4">
         
-        <div class="container">
-            
-            <div class="row">
-                <h1 class="text-center mb-4">Apps</h1>
-                
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="./StaticWebsiteCreator/">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                            <h3 class="mt-3">Create Personal Website</h3>
-                        </a>
-                    </div>
-                </div>
+        <div class="container" >
+    
+            <h1>Build Your Personal Website with Just One Click! </h1>
+            <p>That's right! Instantly create your own personal website, complete with blogging capabilities and tag support straight out of the box. Simply fill in the details below, and your site will be ready in seconds.</p>
+            <h3><a href="./SampleTheme/" target="_blank" rel="noopener noreferrer">Click here for demo site.</a></h3>
+            <h6>This tool generates a static website using HTML and JavaScript, making it easy to host anywhere.</h6>
+            <p>Content is managed using Markdown files (ending in .md) that are placed in each directory. Give it a try now!</p>
 
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="./bookmarkonenotepdf/">
-                            <i class="fas fa-chart-bar fa-3x"></i>
-                            <h3 class="mt-3">Add Bookmark to Onenote PDF</h3>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="./TempFileUploadAndShare/">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                            <h3 class="mt-3">File upload and share</h3>
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
             <hr>
-            <div class="row">
-                <h1 class="text-center mb-4">Scripts</h1>
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="https://github.com/anand-verma/Awesome-Tools/blob/main/UPSC_CSE_QCAB_Generator.ipynb">
-                            <i class="fas fa-project-diagram fa-3x"></i>
-                            <h3 class="mt-3">UPSC CSE QCAB Generator</h3>
-                        </a>
-                    </div>
+            <form id="websiteForm">
+                <div class="mb-3">
+                    <label for="websiteTitle">Website Title</label>
+                    <input type="text" class="form-control" id="websiteTitle" name="websiteTitle" required>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="tool-box text-center p-3">
-                        <a href="https://github.com/anand-verma/Awesome-Tools/blob/main/Add_Bookmark_to_Onenote_exported_PDF.ipynb">
-                            <i class="fas fa-chart-bar fa-3x"></i>
-                            <h3 class="mt-3">Add Bookmark to Onenote PDF</h3>
-                        </a>
-                    </div>
+                <div class="mb-3">
+                    <label for="intro">Tell briefly about youself</label>
+                    <textarea class="form-control" id="intro" name="intro" rows="3" required></textarea>
                 </div>
+                <div class="mb-3">
+                    <label for="profilePicture">Profile Picture (In .jpg format)</label>
+                    <input type="file" class="form-control" id="profilePicture" name="profilePicture" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3 mb-md-0" id="createWebsiteButton" style="background-color: purple; margin: 10px; ">Create Website</button>
+            </form>
+
+            <div id="progress-bar" class="progress mb-3 mb-md-0" style="display: none;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p> </p>
+            <button type="button" class="btn btn-success mb-3 mb-md-0" id="downloadButton" style="background-color: purple; margin: 10px;" disabled>Download Website</button>
+            <p></p>
+            <div id="iframe-container" style="width: 100%; height: 400px; position: relative;">
+                <iframe id="myIframe" srcdoc="" style="width: 100%; height: 100%;"></iframe>
             </div>
 
         </div>
@@ -98,7 +79,9 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
