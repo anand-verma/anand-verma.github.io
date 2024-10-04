@@ -20,15 +20,78 @@ function renderBlogPosts(blogPosts) {
         blogCard.innerHTML = `
             ${imageSection}
             <div class="card-body">
-                <p><a href="./index.html?page=${blog.fileName}" class="card-title h2">${blog.title}</a></p>
+                <p><a href="./index.html?page=${blog.fileName}" class="card-title h2 blog-link">${blog.title}</a></p>
                 
                 <p class="card-text">${blog.description}</p>
-                
+
                 <p class="card-text">Tags: ${blog.tags.join(', ')}</p>
             </div>
         `;
         blogContainer.appendChild(blogCard);
     });
+
+    // Attach blog click handler specifically to blog links
+    document.querySelectorAll(".blog-link").forEach(link => {
+        link.addEventListener("click", handleBlogClick);
+    });
+
+    // Attach tag click handler specifically to tag links
+    document.querySelectorAll(".tag-link").forEach(link => {
+        link.addEventListener("click", handleTagClick);
+    });
+}
+
+// Function to handle tag clicks
+function handleTagClick(event) {
+    event.preventDefault();
+    const urlFriendlyTag = event.target.getAttribute('href').split('=')[1];
+    const tag = urlFriendlyTag.replace(/-/g, ' '); // Convert hyphens back to spaces
+    updateTagSelection(tag);
+}
+
+// Function to handle blog clicks
+function handleBlogClick(event) {
+    event.preventDefault();
+    const blogFile = event.target.getAttribute('href').split('=')[1];
+    window.history.pushState({}, "", `./index.html?page=${blogFile}`);
+    fetchAndRenderBlog(blogFile);
+}
+
+// Function to update tag selection and URL
+function updateTagSelection(tag) {
+    const urlFriendlyTag = tag.replace(/\s+/g, '-'); // Convert spaces to hyphens for URL
+    window.history.pushState({}, "", `./index.html?tag=${urlFriendlyTag}`);
+    const filteredBlogs = blogByTags[tag] || [];
+    renderBlogPosts(filteredBlogs);
+}
+
+// Function to fetch and render the blog content
+function fetchAndRenderBlog(blogFile) {
+    fetch(blogFile)
+        .then(response => response.text())
+        .then(data => {
+            const parsedContent = md.render(data.replace(/---([\s\S]+?)---/, ''));
+            blogContainer.innerHTML = `<div class="blog-card">${parsedContent}</div>`;
+            document.getElementById("body-header").innerHTML = '';
+            renderTags(); // Re-render tags after fetching a blog
+        })
+        .catch(error => console.error('Error fetching blog file:', error));
+}
+
+// Function to handle popstate event (back/forward button)
+function handlePopState(event) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlFriendlyTag = urlParams.get("tag");
+    const page = urlParams.get("page");
+
+    if (page) {
+        fetchAndRenderBlog(page);
+    } else if (urlFriendlyTag) {
+        const tag = urlFriendlyTag.replace(/-/g, ' '); // Convert hyphens back to spaces
+        renderBlogPosts(blogByTags[tag] || []);
+    } else {
+        renderBlogPosts(blogByTags.All);
+    }
 }
 
 // Function to render tags
@@ -45,13 +108,17 @@ function renderTags() {
     }
 
     allTags.forEach((tag) => {
+        const urlFriendlyTag = tag.replace(/\s+/g, '-'); // Convert spaces to hyphens for URL
+
+        // Tag Links
         const tagLink = document.createElement("a");
-        tagLink.href = `./index.html?tag=${tag}`;
+        tagLink.href = `./index.html?tag=${urlFriendlyTag}`;
         tagLink.textContent = `${tag} (${blogByTags[tag].length})`;
         tagLink.classList.add("btn", "btn-outline-primary", "w-100", "mb-2");
         tagLink.addEventListener("click", handleTagClick);
         tagContainer.appendChild(tagLink);
 
+        // Dropdown options
         const dropdownOption = document.createElement("option");
         dropdownOption.value = tag;
         dropdownOption.textContent = `${tag} (${blogByTags[tag].length})`;
@@ -64,61 +131,9 @@ function renderTags() {
     });
 }
 
-// Function to handle tag clicks
-function handleTagClick(event) {
-    event.preventDefault();
-    const tag = event.target.textContent.split(' ')[0];
-    updateTagSelection(tag);
-}
-
 // Function to handle tag dropdown change
 function handleTagDropdownChange(tag) {
     updateTagSelection(tag);
-}
-
-// Function to update tag selection and URL
-function updateTagSelection(tag) {
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set("tag", tag);
-    window.history.pushState({}, "", `./index.html?tag=${tag}`);
-    const filteredBlogs = blogByTags[tag] || [];
-    renderBlogPosts(filteredBlogs);
-}
-
-// Function to handle blog clicks
-function handleBlogClick(event) {
-    event.preventDefault();
-    const blogFile = event.target.getAttribute('href').split('=')[1];
-    window.history.pushState({}, "", `./index.html?page=${blogFile}`);
-    fetchAndRenderBlog(blogFile);
-}
-
-// Function to fetch and render the blog content
-function fetchAndRenderBlog(blogFile) {
-    fetch(blogFile)
-        .then(response => response.text())
-        .then(data => {
-            const parsedContent = md.render(data.replace(/---([\s\S]+?)---/, ''));
-            blogContainer.innerHTML = `<div class="blog-card">${parsedContent}</div>`;
-            document.getElementById("body-header").innerHTML = '';
-            renderTags();
-        })
-        .catch(error => console.error('Error fetching blog file:', error));
-}
-
-// Function to handle popstate event (back/forward button)
-function handlePopState(event) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const tag = urlParams.get("tag");
-    const page = urlParams.get("page");
-
-    if (page) {
-        fetchAndRenderBlog(page);
-    } else if (tag && blogByTags[tag]) {
-        renderBlogPosts(blogByTags[tag]);
-    } else {
-        renderBlogPosts(blogByTags.All);
-    }
 }
 
 // Main function to orchestrate the process
