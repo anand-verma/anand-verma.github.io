@@ -60,7 +60,7 @@ function handleBlogClick(event) {
 function updateBlogHeader(tag){
     if (tag == "" || tag=="All"){
         document.getElementById("body-header").innerHTML = `
-            <h3 class="text-center mb-4">Perspectives from My Lens</h3>
+            <h3 class="text-center mb-4">Perspectives through My Lens</h3>
             <hr>
         `
     }
