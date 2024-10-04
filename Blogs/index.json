@@ -1,0 +1,24 @@
+{
+    "blogs": [
+        {
+            "fileName": "dark-chapter.md",
+            "title": "काला अध्याय",
+            "description": "हर किसी के पास यादों का जखीरा होता हैं। कुछ यादें मीठी  होती हैं वहीं कुछ यादें खट्टी। लेकिन कुछ यादें काली भी होती हैं। ",
+            "imageUrl": "",
+            "tags": [
+                "Life"
+            ],
+            "date": "29/09/2022"
+        },
+        {
+            "fileName": "markdownuseguide.md",
+            "title": "Markdown (MD) File Use Guide",
+            "description": "This is sample text to write in Markdown (MD) File.",
+            "imageUrl": "",
+            "tags": [
+                "Markdown"
+            ],
+            "date": "2023-10-02"
+        }
+    ]
+}

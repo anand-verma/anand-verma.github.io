@@ -20,8 +20,10 @@ function renderBlogPosts(blogPosts) {
         blogCard.innerHTML = `
             ${imageSection}
             <div class="card-body">
-                <a href="./index.html?page=${blog.fileName}" class="card-title h2">${blog.title}</a>
+                <p><a href="./index.html?page=${blog.fileName}" class="card-title h2">${blog.title}</a></p>
+                
                 <p class="card-text">${blog.description}</p>
+                
                 <p class="card-text">Tags: ${blog.tags.join(', ')}</p>
             </div>
         `;
@@ -122,7 +124,7 @@ function handlePopState(event) {
 // Main function to orchestrate the process
 async function main() {
     try {
-        blogByTags = await getBlogByTags("./index.md");
+        blogByTags = await getBlogByTags("./index.json");
         renderTags();
 
         // Handle initial rendering based on URL parameters
@@ -145,118 +147,48 @@ async function main() {
 
 main();
 
-
 //-----------------------------------------------------------------------------------------------------
-// Function to fetch blog data from index.md
-async function fetchIndexData(indexMdPath) {
+
+// Fetch blog data from index.json
+async function fetchIndexData(indexJsonPath) {
     try {
-      const response = await fetch(indexMdPath);
-      const data = await response.text();
-      const frontMatter = extractFrontMatter(data);
-  
-      return frontMatter.blogs;
+        const response = await fetch(indexJsonPath);
+        const data = await response.json();
+        return data.blogs;
     } catch (error) {
-      console.error('Error fetching index data:', error);
-      return [];
+        console.error('Error fetching index data:', error);
+        return [];
     }
-  }
-  
-  async function populateBlogByTags(blogFiles) {
+}
+
+// Populate blogByTags from blog files in index.json
+async function populateBlogByTags(blogFiles) {
     const blogByTags = {};
-    for (const file of blogFiles) {
-      try {
-        const rawData = await fetchBlogPostData(file);
-  
-        // Add blog data to blogByTags object based on tags
-        const { tags } = rawData;
+    for (const blog of blogFiles) {
+        const { tags } = blog;
         for (const tag of tags) {
-          if (!blogByTags[tag]) {
-            blogByTags[tag] = [];
-          }
-          blogByTags[tag].push(rawData);
+            if (!blogByTags[tag]) {
+                blogByTags[tag] = [];
+            }
+            blogByTags[tag].push(blog);
         }
-  
+
         // Add to 'All' tag
         if (!blogByTags['All']) {
-          blogByTags['All'] = [];
+            blogByTags['All'] = [];
         }
-        blogByTags['All'].push(rawData);
-      } catch (error) {
-        console.error('Failed to load file:', error);
-      }
+        blogByTags['All'].push(blog);
     }
     return blogByTags;
-  }
-  
-  // Function to fetch blog post data
-  async function fetchBlogPostData(filename) {
+}
+
+// Main function to orchestrate the process of fetching blog by tags from index.json
+async function getBlogByTags(indexJsonPath) {
     try {
-      const response = await fetch(filename);
-      const data = await response.text();
-      const frontData = extractFrontMatter(data);
-      const postData = parseFrontMatterData(filename, frontData);
-      return postData;
+        const blogFiles = await fetchIndexData(indexJsonPath);
+        const blogByTags = await populateBlogByTags(blogFiles);
+        return blogByTags;
     } catch (error) {
-      console.error('Error fetching blog post data:', error);
+        console.error('Error in getBlogByTags function:', error);
     }
-  }
-  
-  function parseFrontMatterData(filename, frontData) {
-    const result = {};
-    result['fileName'] = filename;
-    result['title'] = frontData.title ? frontData.title : filename.split('.')[0];
-    result['description'] = frontData.description ? frontData.description : '';
-    result['imageUrl'] = frontData.imageurl ? frontData.imageurl : '';
-    result['date'] = frontData.date ? frontData.date : 'Undated';
-    result['tags'] = frontData.tags ? frontData.tags : ['Uncategorised'];
-  
-    return result;
-  }
-  
-  // Main function to orchestrate the process
-  async function getBlogByTags(indexMdPath) {
-    try {
-      const blogFiles = await fetchIndexData(indexMdPath);
-      const blogByTags = await populateBlogByTags(blogFiles);
-  
-      return blogByTags;
-      
-    } catch (error) {
-      console.error('Error in getBlogByTags function:', error);
-    }
-  }
-
-
-//-----------------------------------------------------------------------------------------------------
-
-function extractFrontMatter(mdContent) {
-    const frontMatterRegex = /^---([\s\S]*?)---/m;
-    const match = mdContent.match(frontMatterRegex);
-    
-    const frontMatter = {};
-    if (!match) {
-        return frontMatter; // Return null if no front matter is found
-    }
-   
-    const frontMatterContent = match[1].trim();
-    const frontMatterLines = frontMatterContent.split('\n');
-    
-    
-    let currentKey = null;
-    for (let line of frontMatterLines) {
-        line = line.split('#')[0];
-        line = line.trim();
-        
-        if (line.startsWith('- ')) {
-            frontMatter[currentKey] = frontMatter[currentKey] || [];
-            frontMatter[currentKey].push(line.slice(2).trim());
-            
-        } else if (line.includes(':')) {
-            const [key, value] = line.split(/:(.*)/);
-            currentKey = key.trim();
-            frontMatter[currentKey] = value ? value.trim() : '';
-        }
-    }
-    //console.log(match);
-    return frontMatter; // Return the front matter as a plain JavaScript object
 }
