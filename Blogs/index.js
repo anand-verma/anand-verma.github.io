@@ -120,7 +120,7 @@ function renderTags() {
 
         // Dropdown options
         const dropdownOption = document.createElement("option");
-        dropdownOption.value = tag;
+        dropdownOption.value = urlFriendlyTag;
         dropdownOption.textContent = `${tag} (${blogByTags[tag].length})`;
         tagDropdown.appendChild(dropdownOption);
     });
@@ -132,7 +132,8 @@ function renderTags() {
 }
 
 // Function to handle tag dropdown change
-function handleTagDropdownChange(tag) {
+function handleTagDropdownChange(urlFriendlyTag) {
+    const tag = urlFriendlyTag.replace(/-/g, ' '); // Convert hyphens back to spaces
     updateTagSelection(tag);
 }
 
