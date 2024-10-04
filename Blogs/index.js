@@ -57,11 +57,27 @@ function handleBlogClick(event) {
     fetchAndRenderBlog(blogFile);
 }
 
+function updateBlogHeader(tag){
+    if (tag == "" || tag=="All"){
+        document.getElementById("body-header").innerHTML = `
+            <h2 class="text-center mb-4">Perspectives from My Lens</h2>
+            <hr>
+        `
+    }
+    else {
+        document.getElementById("body-header").innerHTML = `
+            <h2 class="text-center mb-4">Perspectives from My Lens: ${tag}</h2>
+            <hr>
+        `;
+    }
+}
+
 // Function to update tag selection and URL
 function updateTagSelection(tag) {
     const urlFriendlyTag = tag.replace(/\s+/g, '-'); // Convert spaces to hyphens for URL
     window.history.pushState({}, "", `./index.html?tag=${urlFriendlyTag}`);
     const filteredBlogs = blogByTags[tag] || [];
+    updateBlogHeader(tag);
     renderBlogPosts(filteredBlogs);
 }
 
@@ -88,8 +104,10 @@ function handlePopState(event) {
         fetchAndRenderBlog(page);
     } else if (urlFriendlyTag) {
         const tag = urlFriendlyTag.replace(/-/g, ' '); // Convert hyphens back to spaces
+        updateBlogHeader(tag);
         renderBlogPosts(blogByTags[tag] || []);
     } else {
+        updateBlogHeader("");
         renderBlogPosts(blogByTags.All);
     }
 }
