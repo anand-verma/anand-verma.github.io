@@ -1,6 +1,28 @@
 // generatePDF.js
 
 document.getElementById("generateQCAB").addEventListener("click", () => {
+    // Custom questions have their own handler and do not use the PYQ selection map.
+    if (typeof window.isCustomQuestionMode === "function" && window.isCustomQuestionMode()) {
+        if (typeof window.getCustomQuestions !== "function") {
+            alert("Custom question handler not loaded!");
+            return;
+        }
+
+        const customQuestions = window.getCustomQuestions();
+
+        if (customQuestions.length === 0) {
+            alert("Add at least one custom question first!");
+            return;
+        }
+
+        customQuestions.forEach((q, i) => {
+            q.question_number = i + 1;
+        });
+
+        generateQCABPDF(customQuestions);
+        return;
+    }
+
     if (typeof window.getSelectedQuestions !== "function") {
         alert("Selection logic not loaded!");
         return;
@@ -12,19 +34,30 @@ document.getElementById("generateQCAB").addEventListener("click", () => {
         return;
     }
 
-    // Sort by marks if you still want that order, else comment next line
+    // Existing PYQ behaviour: keep current marks-based ordering.
     selectedQuestions.sort((a, b) => a.marks - b.marks);
 
     // Ensure sequential numbering (1,2,3...)
     selectedQuestions.forEach((q, i) => {
         q.question_number = i + 1;
-        console.log("Questions No:", q.question_number);
     });
-
-    //console.log("Selected Questions:", selectedQuestions);
 
     generateQCABPDF(selectedQuestions);
 });
+
+function getAnswerPages(q) {
+    // Permanent rule:
+    // 1. If q.pages is supplied and is a valid positive number, use it.
+    // 2. Otherwise fall back to the existing marks-based calculation.
+    const explicitPages = Number(q.pages);
+
+    if (Number.isFinite(explicitPages) && explicitPages > 0) {
+        return Math.ceil(explicitPages);
+    }
+
+    const marks = Number(q.marks) || 0;
+    return Math.max(1, Math.ceil(marks / 6));
+}
 
 function generateQCABPDF(questions) {
     const { jsPDF } = window.jspdf;
@@ -37,36 +70,29 @@ function generateQCABPDF(questions) {
 
     // ---------- PART 1: Render Question Listing ----------
     let currentY = topMargin;
-    const localWidth = rightMargin - leftMargin +4; 
-    const lineHeight = 6; // or set according to your font size and line spacing
+    const localWidth = rightMargin - leftMargin + 4;
+    const lineHeight = 6;
 
     questions.forEach((q, index) => {
-        // Format question text
         const qHeader = `${q.question_number}. `;
-        const qText = `${q.question_text}   [${q.marks} M / ${q.year}]`;
-        console.log( "Questions:",qHeader,"----", qText);
-        // Split text to fit within width
+        const qText = `${q.question_text}   [${q.marks} M${q.word_limit ? ` / ${q.word_limit} W` : ""}${q.year ? ` / ${q.year}` : ""}]`;
         const splitText = doc.splitTextToSize(qText, localWidth);
         const totalHeight = splitText.length * lineHeight + lineHeight;
 
-        // Add new page if content exceeds bottom margin
         if (currentY + totalHeight > pageHeight - 15) {
             doc.addPage();
             currentY = topMargin;
         }
 
-        // Draw question number and text
         doc.text(qHeader, leftMargin - 10, currentY);
         doc.text(splitText, leftMargin + 2, currentY);
 
-        // Update Y position
-        currentY += totalHeight; // spacing between questions
+        currentY += totalHeight;
     });
 
     // ---------- PART 2: Render QCAB Pages ----------
-
     questions.forEach((q) => {
-        const pagesNeeded = Math.ceil(q.marks / 6);
+        const pagesNeeded = getAnswerPages(q);
 
         for (let p = 0; p < pagesNeeded; p++) {
             doc.addPage();
@@ -77,7 +103,7 @@ function generateQCABPDF(questions) {
             doc.line(rightMargin, topMargin, rightMargin, bottomMargin);
 
             // Footer
-            const footerText = `XXXX-${q.question_id}`;
+            const footerText = `XXXX-${q.question_id || `CUSTOM_${q.question_number}`}`;
             doc.setFontSize(8);
             doc.text(footerText, leftMargin - 10, bottomMargin + 3);
 
@@ -87,15 +113,19 @@ function generateQCABPDF(questions) {
                 doc.text(`Q. ${q.question_number}`, leftMargin - 15, topMargin + 5);
 
                 // Question Text
-                const localWidth = rightMargin - leftMargin - 4;
+                const localQuestionWidth = rightMargin - leftMargin - 4;
                 const questionText = `${q.question_text}`;
-                const splitText = doc.splitTextToSize(questionText, localWidth);
+                const splitText = doc.splitTextToSize(questionText, localQuestionWidth);
                 let currentY = topMargin + 5;
                 doc.text(splitText, leftMargin + 2, currentY);
 
                 // Marks / Word limit / Year (right margin top)
                 currentY = topMargin + 5;
-                doc.text(`${q.marks} M / ${q.year}`, rightMargin + 2, currentY);
+                const metadata = [
+                    q.marks != null ? `${q.marks} M` : "",
+                    q.year ? `${q.year}` : ""
+                ].filter(Boolean).join(" / ");
+                doc.text(metadata, rightMargin + 2, currentY);
             } else {
                 // Right Margin Text (only for continuation pages)
                 const localWidth = 23;
@@ -113,14 +143,11 @@ function generateQCABPDF(questions) {
     if (window.generatedPDF) {
         window.generatedPDF.save("QCAB.pdf");
     }
-    //document.getElementById("downloadPDF").style.display = "inline-block";
-    //alert("QCAB PDF generated! Click 'Download QCAB PDF' to save.");
 }
 
 document.getElementById("downloadPDF").addEventListener("click", () => {
     if (window.generatedPDF) {
         window.generatedPDF.save("QCAB.pdf");
-        // hide again after downloading
         document.getElementById("downloadPDF").style.display = "none";
     }
 });
