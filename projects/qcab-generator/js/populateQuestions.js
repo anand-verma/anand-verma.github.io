@@ -85,6 +85,9 @@ function getSelectedQuestions() {
 
 // ---------------------- Filters UI ----------------------
 function setupFilters() {
+  // Custom mode is owned by CustomQuestionHandler.js
+  if (currentMode === "custom") return;
+
   filtersDiv.innerHTML = "";
   resetSummaryUI();
   tbody.innerHTML = "";
@@ -100,7 +103,7 @@ function setupFilters() {
     const gsPaperFilter = document.getElementById("gsPaperFilter");
 
     // populate values (sorted)
-    const years = Array.from(new Set(questionsRepo.questions_repository.map(q => q.year))).sort((a,b)=>a-b);
+    const years = Array.from(new Set(questionsRepo.questions_repository.map(q => Number(q.year)))).sort((a,b)=>b-a);
     const gsPapers = Array.from(new Set(questionsRepo.questions_repository.map(q => q.gs_paper)));
 
     years.forEach(y => yearFilter.add(new Option(y, y)));
@@ -156,6 +159,9 @@ function populateSyllabusOptions(gsVal) {
 
 // ---------------------- Table population & selection logic ----------------------
 function populateTable() {
+  // Custom mode has no PYQ table
+  if (currentMode === "custom") return;
+  
   tbody.innerHTML = ""; // clear only the visible rows
   // Do NOT clear selectionMap here (we are persisting selections across filters)
 

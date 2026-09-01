@@ -4,12 +4,12 @@ html, body {
   background-color: #f8f9fa;
   color: #333;
   padding: 0;
-  margin: 0;           /* <-- MAKE SURE THIS IS 0! */
+  margin: 0;
   box-sizing: border-box;
 }
 
 * {
-  box-sizing: inherit; /* Universal border-box */
+  box-sizing: inherit;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 
 .main-content {
   flex: 1 0 auto;
-  padding: 20px;       /* Instead of margin on body, apply padding here if you want */
+  padding: 20px;
 }
 
 h1 {
@@ -84,17 +84,239 @@ footer {
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.6em;
+  h1 { font-size: 1.6em; }
+  #filters select { margin: 5px 0; width: 90%; }
+  button { width: 90%; margin: 8px 0; }
+}
+
+/* ---------- Custom Question Mode ---------- */
+.custom-question-panel {
+  max-width: 1200px;
+  margin: 10px auto 20px;
+  padding: 18px;
+  border: 1px solid #d6dee8;
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+}
+
+.custom-question-heading h2 {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+}
+
+.custom-question-heading p {
+  margin: 0 0 18px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.custom-field {
+  margin-bottom: 14px;
+}
+
+.custom-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.custom-field label span {
+  font-weight: normal;
+  color: #667085;
+  font-size: 12px;
+}
+
+.custom-field textarea,
+.custom-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfd8e3;
+  border-radius: 7px;
+  font: inherit;
+  background: #fff;
+}
+
+.custom-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.custom-field textarea:focus,
+.custom-field input:focus {
+  outline: 2px solid rgba(66, 133, 244, 0.2);
+  border-color: #6f8fe8;
+}
+
+.custom-fields-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.custom-field small {
+  display: block;
+  margin-top: 5px;
+  color: #667085;
+  font-size: 11px;
+}
+
+.custom-form-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.custom-primary-button,
+.custom-secondary-button,
+.custom-small-button {
+  border-radius: 6px;
+  border: 1px solid #c7d0dc;
+  background: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.custom-primary-button {
+  background: #6f8fe8;
+  color: #fff;
+  border-color: #6f8fe8;
+  font-weight: 600;
+}
+
+.custom-secondary-button {
+  background: #f5f7fa;
+}
+
+.custom-small-button {
+  padding: 6px 9px;
+  font-size: 12px;
+}
+
+.custom-small-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.custom-delete-button {
+  color: #a33;
+}
+
+.custom-error {
+  min-height: 18px;
+  margin-bottom: 8px;
+  color: #b42318;
+  font-size: 13px;
+}
+
+.custom-question-list {
+  margin-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.custom-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.custom-list-header h3 {
+  margin: 0 0 3px;
+  font-size: 1rem;
+}
+
+.custom-list-header span {
+  color: #667085;
+  font-size: 12px;
+}
+
+.custom-totals {
+  font-weight: 600;
+  font-size: 13px;
+  text-align: right;
+}
+
+.custom-question-card {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding: 13px 0;
+  border-top: 1px solid #edf0f3;
+}
+
+.custom-question-number {
+  font-weight: 700;
+  color: #475467;
+}
+
+.custom-question-text {
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.custom-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 7px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.custom-question-meta span {
+  padding-right: 7px;
+  border-right: 1px solid #d0d5dd;
+}
+
+.custom-question-meta span:last-child {
+  border-right: 0;
+}
+
+.custom-question-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.custom-empty-state {
+  padding: 18px 8px;
+  text-align: center;
+  color: #667085;
+  font-size: 13px;
+  border: 1px dashed #cfd8e3;
+  border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+  .custom-question-panel {
+    padding: 14px;
   }
-  #filters select {
-    margin: 5px 0;
-    width: 90%;
+
+  .custom-fields-row {
+    grid-template-columns: 1fr;
   }
-  button {
-    width: 90%;
-    margin: 8px 0;
+
+  .custom-question-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+
+  .custom-question-actions {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+
+  .custom-list-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .custom-totals {
+    text-align: left;
   }
 }
