@@ -6,7 +6,6 @@ class BlogManager {
         this.filteredPosts = [];
         this.currentTags = new Set();
         this.searchTerm = '';
-        this.workerProxy = 'https://gdrive-proxy.alluarjun-fakemail.workers.dev/?url=';
 
         this.init();
     }
@@ -20,7 +19,7 @@ class BlogManager {
         this.updateSidebar();
     }
 
-    /*
+    
     async loadBlogData() {
         try {
             // Load blog metadata
@@ -34,32 +33,9 @@ class BlogManager {
             console.error('Error loading blog data:', error);
             this.handleLoadError();
         }
-    }\
-    */
-
-    async loadBlogData() {
-        try {
-            // Original metadata url on GDrive (your public file)
-            //const workerProxy="https://gdrive-proxy.alluarjun-fakemail.workers.dev/?url=";
-            const metadataDriveUrl = "https://drive.google.com/uc?export=download&id=1J45iy_eXTSiZoIcv_RDmFxZid_9hAexs";
-            
-            // Proxy fetch URL with proper encoding
-            const proxiedMetadataUrl = this.workerProxy + encodeURIComponent(metadataDriveUrl);
-
-            const response = await fetch(proxiedMetadataUrl);
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-            //console.log(await response.text());
-            const data = await response.json();
-            this.posts = data || [];
-            this.filteredPosts = [...this.posts];
-
-            console.log('Blog data loaded:', this.posts.length, 'posts');
-        } catch (error) {
-            console.error('Error loading blog data:', error);
-            this.handleLoadError();
-        }
     }
-      
+    
+
 
     handleLoadError() {
         // Fallback data if JSON fails to load

@@ -152,141 +152,15 @@ class MarkdownLoader {
     }
 }
 
-class HtmlLoader {
-    constructor(workerProxyBaseUrl) {
-      this.workerProxy = workerProxyBaseUrl || ""; // e.g. "https://your-worker-name.workers.dev/?url="
-      this.init();
-    }
-  
-    async init() {
-      await this.loadPost();
-    }
-  
-    async loadPost() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const slug = urlParams.get("slug");
-  
-      if (!slug) {
-        this.showError("No post specified");
-        return;
-      }
-  
-      try {
-        // Load metadata JSON via proxy
-        const metadataDriveUrl = "https://drive.google.com/uc?export=download&id=1J45iy_eXTSiZoIcv_RDmFxZid_9hAexs";
-        const proxiedMetadataUrl = this.workerProxy + encodeURIComponent(metadataDriveUrl);
-        const metaResponse = await fetch(proxiedMetadataUrl);
-  
-        if (!metaResponse.ok) throw new Error(`Failed to load metadata: ${metaResponse.status}`);
-  
-        const metadata = await metaResponse.json();
-        const postMeta = metadata.find((p) => p.slug === slug);
-  
-        if (!postMeta) {
-          this.showError("Post not found");
-          return;
-        }
-  
-        // Fetch blog HTML content from Google Drive via proxy URL
-        const proxiedHtmlUrl = this.workerProxy + encodeURIComponent(postMeta.htmlUrl);
-        const contentResponse = await fetch(proxiedHtmlUrl);
-  
-        if (!contentResponse.ok) {
-          this.showError("Post content not found");
-          return;
-        }
-  
-        const htmlContent = await contentResponse.text();
-  
-        this.renderPost(postMeta, htmlContent);
-      } catch (error) {
-        console.error("Error loading post:", error);
-        this.showError("Error loading post");
-      }
-    }
-  
-    renderPost(meta, content) {
-      // Update page title
-      document.title = `${meta.title} - Anand Verma Blog`;
-  
-      // Render post header
-      const headerContainer = document.querySelector(".blog-post-header");
-      if (headerContainer) {
-        headerContainer.innerHTML = `
-          <h1>${meta.title}</h1>
-          <div class="blog-post-meta-header">
-            <span><i class="fas fa-calendar"></i> ${this.formatDate(meta.date)}</span>
-            <span><i class="fas fa-clock"></i> ${meta.readTime}</span>
-            <span><i class="fas fa-user"></i> ${meta.author}</span>
-          </div>
-        `;
-      }
-  
-      // Render HTML content directly (already HTML - no parsing needed)
-      const contentContainer = document.querySelector(".blog-post-content");
-      if (contentContainer) {
-        contentContainer.innerHTML = content;
-      }
-  
-      // Setup reading progress
-      this.setupReadingProgress();
-    }
-  
-    setupReadingProgress() {
-      const progressBar = document.querySelector(".reading-progress");
-      if (!progressBar) {
-        const bar = document.createElement("div");
-        bar.className = "reading-progress";
-        document.body.appendChild(bar);
-      }
-  
-      window.addEventListener("scroll", () => {
-        const content = document.querySelector(".blog-post-content");
-        if (!content) return;
-  
-        const contentHeight = content.offsetHeight;
-        const windowHeight = window.innerHeight;
-        const scrolled = window.scrollY;
-        const progress = (scrolled / (contentHeight - windowHeight)) * 100;
-  
-        const bar = document.querySelector(".reading-progress");
-        if (bar) {
-          bar.style.width = Math.min(Math.max(progress, 0), 100) + "%";
-        }
-      });
-    }
-  
-    showError(message) {
-      const container = document.querySelector(".blog-post-content") || document.body;
-      container.innerHTML = `
-        <div class="error-message">
-          <h2>Error</h2>
-          <p>${message}</p>
-          <a href="../" class="btn btn-primary">Back to Blog</a>
-        </div>
-      `;
-    }
-  
-    formatDate(dateString) {
-      const date = new Date(dateString);
-      return date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    }
-  }
 
 // Initialize based on page type
 document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector(".blog-post-content")) {
         // Individual blog post page
-        //new MarkdownLoader();
-        new HtmlLoader("https://gdrive-proxy.alluarjun-fakemail.workers.dev/?url=");
+        new MarkdownLoader();
 
     }
 });
 
 // Export for external use
 window.MarkdownLoader = MarkdownLoader;
-window.HtmlLoader = HtmlLoader;
