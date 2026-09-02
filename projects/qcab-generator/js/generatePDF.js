@@ -81,7 +81,7 @@ async function renderQuestionToCanvas(q, widthPx = 1100) {
     host.style.cssText = [
         "position:fixed", "left:-100000px", "top:0", `width:${widthPx}px`,
         "padding:0", "margin:0", "background:#fff", "color:#111", "font-family:Times New Roman, serif",
-        "font-size:18px", "line-height:1.45", "white-space:normal", "overflow:visible", "z-index:-1"
+        "font-size:30px", "line-height:1.45", "white-space:normal", "overflow:visible", "z-index:-1"
     ].join(";");
 
     host.innerHTML = q.question_html || escapePDFHTML(q.question_text || "");
@@ -206,7 +206,7 @@ async function generateQCABPDF(questions) {
                 if (hasRichQuestion(q)) {
                     try {
                         const canvas = await renderQuestionToCanvas(q);
-                        const image = addCanvasImage(doc, canvas, leftMargin + 2, topMargin + 14, localQuestionWidth);
+                        const image = addCanvasImage(doc, canvas, leftMargin + 2, topMargin, localQuestionWidth, 55);
                         questionBottom = topMargin + 14 + image.height;
                     } catch (error) {
                         console.error("Rich question rendering failed:", error);
@@ -223,7 +223,7 @@ async function generateQCABPDF(questions) {
                 }
 
                 // Marks / Word limit / Year (right margin top)
-                doc.setFontSize(10);
+                doc.setFontSize(12);
                 const metadata = [
                     q.marks != null ? `${q.marks} M` : "",
                     q.year ? `${q.year}` : ""
