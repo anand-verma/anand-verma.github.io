@@ -1,0 +1,113 @@
+/* ---------- Custom Question Mode ---------- */
+.custom-question-panel {
+  max-width: 1280px;
+  margin: 10px auto 20px;
+  padding: 18px;
+  border: 1px solid #d6dee8;
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+}
+
+.custom-question-heading h2 { margin: 0 0 4px; font-size: 1.25rem; }
+.custom-question-heading p { margin: 0 0 18px; color: #667085; font-size: 14px; }
+.custom-field { margin-bottom: 14px; }
+.custom-field label { display: block; margin-bottom: 7px; font-weight: 600; }
+.custom-field label span { font-weight: normal; color: #667085; font-size: 12px; }
+
+.custom-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 7px;
+}
+
+.custom-toolbar-button {
+  min-height: 36px;
+  padding: 7px 11px;
+  border: 1px solid #cfd8e3;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #344054;
+  cursor: pointer;
+}
+.custom-toolbar-button:hover { background: #eef2f7; }
+.custom-toolbar-help { color: #667085; font-size: 12px; }
+
+.custom-rich-editor {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid #1f1f1f;
+  border-radius: 7px;
+  background: #fff;
+  font: 16px/1.5 Arial, sans-serif;
+  overflow-wrap: anywhere;
+  outline: none;
+}
+.custom-rich-editor:empty::before {
+  content: attr(data-placeholder);
+  color: #98a2b3;
+  pointer-events: none;
+}
+.custom-rich-editor:focus {
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.16);
+}
+
+.qc-question-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 8px 0;
+  object-fit: contain;
+}
+
+.custom-field textarea, .custom-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfd8e3;
+  border-radius: 7px;
+  font: inherit;
+  background: #fff;
+}
+.custom-fields-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.custom-field small { display: block; margin-top: 5px; color: #667085; font-size: 11px; }
+.custom-form-actions { display: flex; gap: 8px; align-items: center; }
+.custom-primary-button, .custom-secondary-button, .custom-small-button {
+  border-radius: 6px; border: 1px solid #c7d0dc; background: #fff; padding: 8px 12px; cursor: pointer;
+}
+.custom-primary-button { background: #6f8fe8; color: #fff; border-color: #6f8fe8; font-weight: 600; }
+.custom-secondary-button { background: #f5f7fa; }
+.custom-small-button { padding: 6px 9px; font-size: 12px; }
+.custom-small-button:disabled { opacity: .4; cursor: not-allowed; }
+.custom-delete-button { color: #a33; }
+.custom-error { min-height: 18px; margin-bottom: 8px; color: #b42318; font-size: 13px; }
+.custom-question-list { margin-top: 24px; border-top: 1px solid #e5e7eb; padding-top: 16px; }
+.custom-list-header { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-bottom: 12px; }
+.custom-list-header h3 { margin: 0 0 3px; font-size: 1rem; }
+.custom-list-header span { color: #667085; font-size: 12px; }
+.custom-totals { font-weight: 600; font-size: 13px; text-align: right; }
+.custom-question-card {
+  display: grid; grid-template-columns: 45px minmax(0, 1fr) auto; gap: 12px; align-items: start;
+  padding: 13px 0; border-top: 1px solid #edf0f3;
+}
+.custom-question-number { font-weight: 700; color: #475467; }
+.custom-question-text { line-height: 1.45; white-space: pre-wrap; }
+.custom-question-preview img { width: 100%; max-width: 100%; height: auto; display: block; margin: 8px 0; object-fit: contain; }
+.custom-question-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 7px; color: #667085; font-size: 12px; }
+.custom-question-meta span { padding-right: 7px; border-right: 1px solid #d0d5dd; }
+.custom-question-meta span:last-child { border-right: 0; }
+.custom-question-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 5px; }
+.custom-empty-state { padding: 18px 8px; text-align: center; color: #667085; font-size: 13px; border: 1px dashed #cfd8e3; border-radius: 7px; }
+
+@media (max-width: 768px) {
+  .custom-question-panel { padding: 14px; }
+  .custom-fields-row { grid-template-columns: 1fr; }
+  .custom-question-card { grid-template-columns: 38px minmax(0, 1fr); }
+  .custom-question-actions { grid-column: 2; justify-content: flex-start; }
+  .custom-list-header { align-items: flex-start; flex-direction: column; }
+  .custom-totals { text-align: left; }
+  .custom-toolbar-help { width: 100%; }
+}

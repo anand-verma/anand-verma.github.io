@@ -1,6 +1,45 @@
 {
   "posts": [
     {
+      "id": "post-6",
+      "title": "खो जाने की ख्वाहिश",
+      "excerpt": "भीड़ के शोर में, हज़ारों निगाहों के बीच - नज़र आने के अपराध से बच जाने की ख्वाहिश।",
+      "date": "2026-01-14",
+      "author": "Anand",
+      "tags": [
+        "Life",
+        "Poem"
+      ],
+      "readTime": "2 min read",
+      "slug": "khwahish"
+    },
+    {
+      "id": "post-5",
+      "title": "तलब",
+      "excerpt": "तलब सुने जाने की, तलब एक सुनने वाले की। तलब समझे जाने की, तलब एक समझने वाले की।",
+      "date": "2025-11-01",
+      "author": "Anand",
+      "tags": [
+        "Life",
+        "Poem"
+      ],
+      "readTime": "2 min read",
+      "slug": "talab"
+    },
+    {
+      "id": "post-4",
+      "title": "सपने",
+      "excerpt": "कोई घर जा रहा है, कोई घर से जा रहा है।",
+      "date": "2025-10-31",
+      "author": "Anand",
+      "tags": [
+        "Life",
+        "Poem"
+      ],
+      "readTime": "2 min read",
+      "slug": "sapne"
+    },
+    {
       "id": "post-3",
       "title": "कश्मकश",
       "excerpt": "स्मृति - नदी किनारे बसे वो गाँव हो, बगल में बंधी हुई एक छोटी नाव हो।",
