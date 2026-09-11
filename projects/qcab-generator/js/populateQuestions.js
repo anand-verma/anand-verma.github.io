@@ -83,7 +83,6 @@ function showTableMessage(message) {
   tr.className = "table-empty-row";
   const td = document.createElement("td");
   td.colSpan = 6;
-  td.className = "table-empty-cell";
   td.innerHTML = message;
   tr.appendChild(td);
   tbody.appendChild(tr);
