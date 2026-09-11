@@ -13,10 +13,6 @@ const filtersDiv = document.getElementById("filters");
 const tbody = document.querySelector("#questionsTable tbody");
 const selectAllCheckbox = document.getElementById("selectAll");
 const summaryDiv = document.getElementById("selectedSummary");
-const selectedCountSpan = document.getElementById("selectedCount");
-const totalMarksSpan = document.getElementById("totalMarks");
-const count10Span = document.getElementById("count10");
-const count15Span = document.getElementById("count15");
 
 // load JSONs and init
 (async function init() {
@@ -49,10 +45,7 @@ const count15Span = document.getElementById("count15");
 // ---------------------- Helpers ----------------------
 function resetSummaryUI() {
   summaryDiv.style.display = "none";
-  selectedCountSpan.textContent = "0";
-  totalMarksSpan.textContent = "0";
-  count10Span.textContent = "0";
-  count15Span.textContent = "0";
+  summaryDiv.innerHTML = `Selected Questions: <span id="selectedCount">0</span>, Total Marks: <span id="totalMarks">0</span>`;
 }
 
 function wireModeToggle() {
@@ -84,6 +77,19 @@ function getSelectedQuestions() {
 }
 
 // ---------------------- Filters UI ----------------------
+function showTableMessage(message) {
+  tbody.innerHTML = "";
+  const tr = document.createElement("tr");
+  tr.className = "table-empty-row";
+  const td = document.createElement("td");
+  td.colSpan = 6;
+  td.className = "table-empty-cell";
+  td.innerHTML = message;
+  tr.appendChild(td);
+  tbody.appendChild(tr);
+  updateSelectAllState();
+}
+
 function setupFilters() {
   // Custom mode is owned by CustomQuestionHandler.js
   if (currentMode === "custom") return;
@@ -112,6 +118,8 @@ function setupFilters() {
     yearFilter.addEventListener("change", populateTable);
     gsPaperFilter.addEventListener("change", populateTable);
 
+    showTableMessage("Select a <strong>Year</strong> or <strong>GS Paper</strong> above to view questions.");
+
   } else { // gs-syllabus
     filtersDiv.innerHTML = `
       <select id="gsPaperFilter2"><option value="">-- Select GS Paper --</option></select>
@@ -131,6 +139,8 @@ function setupFilters() {
 
     // when a syllabus topic chosen -> populate table
     syllabusFilter.addEventListener("change", populateTable);
+
+    showTableMessage("Select a <strong>GS Paper</strong> above to view questions.");
   }
 }
 
@@ -172,8 +182,7 @@ function populateTable() {
     const yearVal = yearFilter ? yearFilter.value : "";
     const gsVal = gsPaperFilter ? gsPaperFilter.value : "";
     if (!yearVal && !gsVal) {
-      // nothing selected -> do not populate
-      updateSelectAllState();
+      showTableMessage("Select a <strong>Year</strong> or <strong>GS Paper</strong> above to view questions.");
       updateSummary(); 
       return;
     }
@@ -191,7 +200,7 @@ function populateTable() {
     const gsVal = gsPaperFilter2 ? gsPaperFilter2.value : "";
     const syllabusVal = syllabusFilter ? syllabusFilter.value : "";
     if (!gsVal && !syllabusVal) {
-      updateSelectAllState();
+      showTableMessage("Select a <strong>GS Paper</strong> or <strong>Syllabus Topic</strong> above to view questions.");
       updateSummary();
       return;
     }
@@ -207,15 +216,24 @@ function populateTable() {
 
 // build rows using createElement (never mix innerHTML after adding nodes)
 function buildTableRows(questionList) {
+  if (!questionList || questionList.length === 0) {
+    showTableMessage("No questions found matching the selected filters.");
+    updateSummary();
+    return;
+  }
+
   // keep order as in questionList
   questionList.forEach(q => {
     const tr = document.createElement("tr");
 
     // Checkbox cell
     const tdCheckbox = document.createElement("td");
+    tdCheckbox.className = "col-checkbox";
     const cb = document.createElement("input");
     cb.type = "checkbox";
     cb.dataset.qid = q.question_id;
+    cb.title = "Select question";
+    cb.setAttribute("aria-label", "Select question");
 
     // set initial checked state from selectionMap (persisted across filters)
     if (selectionMap.get(q.question_id)) {
@@ -232,31 +250,48 @@ function buildTableRows(questionList) {
       updateSelectAllState(); // reflect any change in select-all checkbox
     });
 
+    // Row click toggles selection
+    tr.addEventListener("click", (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "BUTTON") return;
+      const selection = window.getSelection();
+      if (selection && selection.toString().trim().length > 0) return;
+      cb.checked = !cb.checked;
+      cb.dispatchEvent(new Event("change"));
+    });
+
     tdCheckbox.appendChild(cb);
     tr.appendChild(tdCheckbox);
 
     // Year cell
     const tdYear = document.createElement("td");
+    tdYear.className = "col-year";
     tdYear.textContent = q.year;
     tr.appendChild(tdYear);
 
     // GS Paper
     const tdGS = document.createElement("td");
-    tdGS.textContent = q.gs_paper;
+    tdGS.className = "col-paper";
+    const gsBadge = document.createElement("span");
+    gsBadge.className = "gs-badge";
+    gsBadge.textContent = q.gs_paper;
+    tdGS.appendChild(gsBadge);
     tr.appendChild(tdGS);
 
     // Question text
     const tdText = document.createElement("td");
+    tdText.className = "col-question";
     tdText.textContent = q.question_text;
     tr.appendChild(tdText);
 
     // Marks
     const tdMarks = document.createElement("td");
+    tdMarks.className = "col-marks";
     tdMarks.textContent = q.marks;
     tr.appendChild(tdMarks);
 
     // Word limit
     const tdWord = document.createElement("td");
+    tdWord.className = "col-limit";
     tdWord.textContent = q.word_limit;
     tr.appendChild(tdWord);
 
@@ -291,7 +326,7 @@ function updateSelectAllState() {
 
 // Select-all toggles only visible checkboxes and updates selectionMap accordingly
 selectAllCheckbox.addEventListener("change", function () {
-  const visibleRows = Array.from(tbody.querySelectorAll("tr"));
+  const visibleRows = Array.from(tbody.querySelectorAll("tr:not(.table-empty-row)"));
   const checked = this.checked;
   visibleRows.forEach(tr => {
     const cb = tr.querySelector("input[type='checkbox']");
@@ -314,8 +349,7 @@ function updateSummary() {
 
   let totalSelected = 0;
   let totalMarks = 0;
-  let count10 = 0;
-  let count15 = 0;
+  const marksMap = new Map(); // key: marks (number), value: count
 
   for (const [qid, sel] of selectionMap.entries()) {
     if (!sel) continue;
@@ -324,16 +358,22 @@ function updateSummary() {
     totalSelected += 1;
     const marks = Number(q.marks) || 0;
     totalMarks += marks;
-    if (marks === 10) count10++;
-    if (marks === 15) count15++;
+    marksMap.set(marks, (marksMap.get(marks) || 0) + 1);
   }
 
   // update UI
-  summaryDiv.style.display = totalSelected > 0 ? "block" : "none";
-  selectedCountSpan.textContent = String(totalSelected);
-  totalMarksSpan.textContent = String(totalMarks);
-  count10Span.textContent = String(count10);
-  count15Span.textContent = String(count15);
+  if (totalSelected === 0) {
+    summaryDiv.style.display = "none";
+    summaryDiv.innerHTML = `Selected Questions: <span id="selectedCount">0</span>, Total Marks: <span id="totalMarks">0</span>`;
+    return;
+  }
+
+  summaryDiv.style.display = "block";
+  const sortedMarks = Array.from(marksMap.keys()).sort((a, b) => a - b);
+  const breakdownParts = sortedMarks.map(m => `${m}-mark: <span>${marksMap.get(m)}</span>`);
+  const breakdownStr = breakdownParts.length > 0 ? `, ${breakdownParts.join(", ")}` : "";
+
+  summaryDiv.innerHTML = `Selected Questions: <span id="selectedCount">${totalSelected}</span>, Total Marks: <span id="totalMarks">${totalMarks}</span>${breakdownStr}`;
 }
 
 // expose helper for PDF generator to get the selected questions in the repo's original order
@@ -350,5 +390,17 @@ function getSelectedQuestionsOrdered() {
 
 // expose to global so generatePDF.js can call it
 window.getSelectedQuestions = getSelectedQuestionsOrdered;
+
+// Reset all selections, filters, and table — called after successful QCAB generation
+function resetAllSelections() {
+  selectionMap.clear();
+  selectAllCheckbox.checked = false;
+  selectAllCheckbox.indeterminate = false;
+  tbody.innerHTML = "";
+  resetSummaryUI();
+  setupFilters(); // rebuilds filter dropdowns to default state
+}
+
+window.resetAllSelections = resetAllSelections;
 
 // ---------------------- End of script ----------------------

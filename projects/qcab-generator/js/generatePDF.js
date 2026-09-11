@@ -14,6 +14,7 @@ document.getElementById("generateQCAB").addEventListener("click", async () => {
 
         customQuestions.forEach((q, i) => { q.question_number = i + 1; });
         await generateQCABPDF(customQuestions);
+        if (typeof window.resetAllSelections === "function") window.resetAllSelections();
         return;
     }
 
@@ -33,6 +34,7 @@ document.getElementById("generateQCAB").addEventListener("click", async () => {
     selectedQuestions.forEach((q, i) => { q.question_number = i + 1; });
 
     await generateQCABPDF(selectedQuestions);
+    if (typeof window.resetAllSelections === "function") window.resetAllSelections();
 });
 
 function getAnswerPages(q) {

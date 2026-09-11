@@ -18,10 +18,10 @@
 <body>
     <div class="main-content">
 
-        <div style="display: flex; justify-content: space-between; padding: 2px;">
-            <a onclick="location.href='https://anand-verma.github.io/'" style="font-size: 14px; cursor: pointer; color:blue;">Home</a>
-            <a onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLScfw6Ex_n5BXu-yqykG25pDaENT91RoOCzTO32eJvDEzj7JRA/viewform'" style="font-size: 14px; cursor: pointer; color:blue;">Feedback</a>
-        </div>
+        <header class="top-nav">
+            <a href="https://anand-verma.github.io/" class="nav-link">← Home</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScfw6Ex_n5BXu-yqykG25pDaENT91RoOCzTO32eJvDEzj7JRA/viewform" target="_blank" rel="noopener" class="nav-link">Feedback</a>
+        </header>
 
         <h1>UPSC Mains PYQ QCAB Generator</h1>
         <div class="filter-mode">
@@ -33,19 +33,18 @@
         <div id="filters"></div>
 
         <div id="selectedSummary" style="margin-bottom:10px; display:none;">
-            Selected Questions: <span id="selectedCount">0</span>, Total Marks: <span id="totalMarks">0</span>,
-            10-mark: <span id="count10">0</span>, 15-mark: <span id="count15">0</span>
+            Selected Questions: <span id="selectedCount">0</span>, Total Marks: <span id="totalMarks">0</span>
         </div>
 
         <table id="questionsTable">
             <thead>
                 <tr>
-                    <th><input type="checkbox" id="selectAll"></th>
-                    <th>Year</th>
-                    <th>GS Paper</th>
-                    <th>Question Text</th>
-                    <th>Marks</th>
-                    <th>Word Limit</th>
+                    <th class="col-checkbox" scope="col"><input type="checkbox" id="selectAll" title="Select all visible questions" aria-label="Select all visible questions"></th>
+                    <th class="col-year" scope="col">Year</th>
+                    <th class="col-paper" scope="col">GS Paper</th>
+                    <th class="col-question" scope="col">Question Text</th>
+                    <th class="col-marks" scope="col">Marks</th>
+                    <th class="col-limit" scope="col">Word Limit</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -56,19 +55,18 @@
             <button id="downloadPDF" style="display:none;">Download QCAB PDF</button>
         </div>
         <br/>
-        <div id="announcementBanner" style="
-            max-width: 900px;
-            margin: 0 auto 18px;
-            padding: 10px 14px;
-            border: 1px solid #dfe3e8;
-            border-radius: 7px;
-            background: #ffecb4;
-            color: #374151;
-            font-size: 14px;
-            line-height: 1.6;
-        ">
-            <div><strong>New:</strong> Create Custom QCABs with your own questions, marks and answer pages.</div>
-            <div><strong>Updated:</strong> UPSC CSE Mains 2026 questions have been added.</div>
+        <div id="announcementBanner" class="announcement-banner">
+            <div class="announcement-content">
+                <div class="announcement-line">
+                    <span class="banner-tag tag-new">New</span>
+                    <span>Create Custom QCABs with your own questions, marks, and answer pages.</span>
+                </div>
+                <div class="announcement-line">
+                    <span class="banner-tag tag-updated">Updated</span>
+                    <span>UPSC CSE Mains 2026 questions have been added.</span>
+                </div>
+            </div>
+            <button type="button" id="closeAnnouncement" class="announcement-close" title="Dismiss announcement" aria-label="Dismiss announcement">✕</button>
         </div>
 
     </div>
@@ -77,7 +75,7 @@
         <hr>
         <p>
             Generate and download your own customized UPSC Civil Services Examination (CSE) Mains Previous Year Questions (PYQ) Question-cum-Answer Booklet (QCAB) PDF for free. Select questions based on year, General Studies (GS) paper, or syllabus topic to create a personalized practice booklet.
-            Provide feedback <a href="https://docs.google.com/forms/d/e/1FAIpQLScfw6Ex_n5BXu-yqykG25pDaENT91RoOCzTO32eJvDEzj7JRA/viewform">here.</a>
+            Provide feedback <a href="https://docs.google.com/forms/d/e/1FAIpQLScfw6Ex_n5BXu-yqykG25pDaENT91RoOCzTO32eJvDEzj7JRA/viewform" target="_blank" rel="noopener">here.</a>
         </p>
     </footer>
 
@@ -86,24 +84,24 @@
         const banner = document.getElementById("announcementBanner");
         if (!banner) return;
 
-        let removed = false;
-
-        function removeAnnouncement() {
-            if (removed) return;
-
-            removed = true;
-            banner.remove();
-
-            document.removeEventListener("click", removeAnnouncement, true);
-            document.removeEventListener("change", removeAnnouncement, true);
-            document.removeEventListener("input", removeAnnouncement, true);
-            document.removeEventListener("keydown", removeAnnouncement, true);
+        let dismissed = false;
+        function dismissBanner() {
+            if (dismissed) return;
+            dismissed = true;
+            banner.style.opacity = "0";
+            banner.style.transform = "scale(0.98)";
+            banner.style.transition = "opacity 0.2s ease, transform 0.2s ease";
+            setTimeout(function () {
+                banner.remove();
+            }, 200);
         }
 
-        document.addEventListener("click", removeAnnouncement, true);
-        document.addEventListener("change", removeAnnouncement, true);
-        document.addEventListener("input", removeAnnouncement, true);
-        document.addEventListener("keydown", removeAnnouncement, true);
+        // Close on clicking the banner's close button or any button on the page
+        document.addEventListener("click", function (e) {
+            if (e.target.closest("button") || e.target.closest("#closeAnnouncement")) {
+                dismissBanner();
+            }
+        });
     })();
 </script>
 

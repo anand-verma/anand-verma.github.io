@@ -233,13 +233,13 @@
                 
                 <form id="customQuestionForm" novalidate>
                     <div class="custom-field">
-                        <label for="customQuestionText">Question</label>
-                        <div class="custom-editor-toolbar" role="toolbar" aria-label="Question tools">
-                            <button type="button" id="clearQuestionButton" class="custom-toolbar-button">Clear</button>
-                            <span class="custom-toolbar-help">Type text or paste text and images directly into the question box.</span>
-                        </div>
+                        <label for="customQuestionText" class="custom-question-label">
+                            <strong>Question</strong>
+                            <span class="custom-image-tip">📷 Text & Images Supported</span>
+                        </label>
                         <div id="customQuestionText" class="custom-rich-editor" contenteditable="true"
-                            role="textbox" aria-multiline="true" data-placeholder="Enter your question...type text or paste text and images directly into the question box."></div>
+                            role="textbox" aria-multiline="true"
+                            data-placeholder="✍️ Type your question here, or 🖼️ paste images (diagrams, maps, photos) directly into this box (Ctrl+V)..."></div>
                     </div>
 
                     <div class="custom-fields-row">
@@ -250,24 +250,26 @@
 
                         <div class="custom-field">
                             <label for="customPages">Answer Pages</label>
-                            <input id="customPages" type="number" min="1" max="100" step="1" value="2" required>
-                            <small>Exact answer space in the PDF.</small>
+                            <input id="customPages" type="number" min="1" max="100" step="1" value="2" title="Exact answer space in the PDF" required>
                         </div>
 
                         <div class="custom-field">
                             <label for="customWordLimit">Word Limit <span>(optional)</span></label>
                             <input id="customWordLimit" type="number" min="1" max="10000" step="1" placeholder="e.g. 150">
                         </div>
+
+                        <div class="custom-field custom-button-field">
+                            <label class="custom-field-spacer" aria-hidden="true">&nbsp;</label>
+                            <div class="custom-button-group">
+                                <button type="submit" id="addCustomQuestion" class="custom-primary-button">
+                                    ${editingId ? "Update Question" : "+ Add Question"}
+                                </button>
+                                ${editingId ? '<button type="button" id="cancelCustomEdit" class="custom-secondary-button">Cancel</button>' : ""}
+                            </div>
+                        </div>
                     </div>
 
                     <div id="customQuestionError" class="custom-error" role="alert"></div>
-
-                    <div class="custom-form-actions">
-                        <button type="submit" id="addCustomQuestion" class="custom-primary-button">
-                            ${editingId ? "Update Question" : "+ Add Question"}
-                        </button>
-                        ${editingId ? '<button type="button" id="cancelCustomEdit" class="custom-secondary-button">Cancel</button>' : ""}
-                    </div>
                 </form>
 
                 <div class="custom-question-list">
@@ -325,7 +327,8 @@
             if (file) insertPastedImage(file, editor, errorDiv);
         });
 
-        document.getElementById("clearQuestionButton").addEventListener("click", () => clearEditor(editor));
+        const clearBtn = document.getElementById("clearQuestionButton");
+        if (clearBtn) clearBtn.addEventListener("click", () => clearEditor(editor));
 
         form.addEventListener("submit", function (event) {
             event.preventDefault();
